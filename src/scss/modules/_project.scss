@@ -1,0 +1,241 @@
+.project-animation {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  .site-asset {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.fixed-bg {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity .5s ease-in-out;
+  width: 100%;
+  z-index: 1;
+}
+
+.section-top-indicator {
+  border-top: .2rem solid $white;
+  opacity: 0;
+  position: relative;
+  z-index: 3;
+}
+
+.section-content {
+  padding: 0 2rem;
+  position: relative;
+  width: 100% !important; /* stylelint-disable-line declaration-no-important */
+  z-index: 2;
+
+  @include breakpoint(lg) {
+    padding: 0;
+  }
+}
+
+.in-focus {
+
+  .fixed-bg {
+    opacity: 1;
+    position: fixed;
+  }
+}
+
+.project-details {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  .project-logo {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 2rem;
+  }
+
+  .body-regular {
+    hyphens: auto;
+  }
+
+  .no-header {
+    margin-top: 1.8rem;
+  }
+
+  .project-details-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 96rem;
+    padding: 5rem 2rem;
+    position: relative;
+    width: 100%;
+
+    @include breakpoint(sm) {
+
+      > div {
+        margin-bottom: 0;
+        margin-right: 5rem;
+        width: calc((100% - 5rem) / 2);
+      }
+
+      > div:first-child {
+        margin-bottom: 2.5rem;
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+
+    @include breakpoint(md) {
+
+      > div {
+        margin-bottom: 0;
+        margin-right: 5rem;
+        width: calc((100% - 10rem) / 3);
+      }
+
+      > div:first-child {
+        margin-bottom: 0;
+        margin-right: 5rem;
+        width: calc((100% - 10rem) / 3);
+      }
+    }
+
+    @include breakpoint(lg) {
+      padding: 5rem 0;
+    }
+
+    > div {
+      margin-bottom: 2.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.project-link-wrapper {
+  margin-top: -2.5rem;
+  padding-bottom: 5rem;
+}
+
+.project-link {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: block;
+  outline: none;
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%;
+
+  > span {
+    font-size: .9rem;
+    font-weight: 900;
+    letter-spacing: .12em;
+    position: relative;
+    text-transform: uppercase;
+
+    span {
+      color: $white;
+      display: inline-block;
+      transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+
+      &::before {
+        border-bottom: .2rem solid $white;
+        bottom: -.4rem;
+        content: '';
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform .2s ease-in-out;
+        width: 100%;
+      }
+    }
+
+    &::after {
+      border-top: 1px solid $white;
+      content: '';
+      margin-left: .5rem;
+      margin-top: .5rem;
+      position: absolute;
+      transform-origin: left;
+      transition: transform .2s ease-in-out;
+      width: 150%;
+    }
+
+    &::before {
+      border-top: 1px solid $white;
+      content: '';
+      left: -150%;
+      margin-left: -.5rem;
+      margin-top: .5rem;
+      position: absolute;
+      transform-origin: right;
+      transition: transform .2s ease-in-out;
+      width: 150%;
+    }
+  }
+
+  &:hover {
+
+    > span::after {
+      transform: scaleX(0);
+    }
+
+    > span::before {
+      transform: scaleX(0);
+    }
+
+    > span span {
+      border-color: transparent;
+      transform: scale(1.15);
+
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &:active {
+
+    > span span {
+      opacity: .75;
+      transform: scale(1.1);
+
+      &::before {
+        transform: scaleX(1.1);
+      }
+    }
+  }
+
+  &.inverted {
+
+    > span::before {
+      border-top-color: $dark;
+    }
+
+    > span::after {
+      border-top-color: $dark;
+    }
+
+    > span span {
+      color: $dark;
+    }
+
+    > span span::before {
+      border-bottom-color: $dark;
+    }
+  }
+}
+
+.inverted {
+  color: $dark !important; /* stylelint-disable-line declaration-no-important */
+}

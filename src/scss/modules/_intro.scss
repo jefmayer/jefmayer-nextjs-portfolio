@@ -1,0 +1,329 @@
+.site-loading {
+
+  .project-animation-intro .intro-borders {
+    transform: rotate(0) scaleX(0);
+    transition: transform .35s ease-in-out;
+  }
+}
+
+.site-loaded {
+
+  .project-animation-intro .intro-borders {
+    transform: rotate(106deg) scaleX(.75);
+    transition: transform .35s ease-in-out;
+  }
+}
+
+.project-animation-intro {
+
+  .fixed-bg {
+    background: $black;
+  }
+
+  .content-wrapper {
+    left: 0;
+    margin: 0 auto;
+    max-width: 54rem;
+    position: relative;
+    top: 0;
+    transform: scale(.75);
+    transform-origin: center;
+    transition: transform .35s ease-in-out;
+    width: 100%;
+    will-change: transform;
+
+    @include breakpoint(sm) {
+      transform: scale(.9);
+    }
+
+    @include breakpoint(md) {
+      transform: scale(1);
+    }
+  }
+
+  .intro-borders {
+    height: 0;
+    left: 0;
+    margin-top: -50%;
+    overflow: hidden;
+    padding-top: 100%;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: rotate(106deg) scaleX(.75);
+    transform-origin: center;
+    width: 100%;
+    will-change: transform;
+    z-index: 2;
+
+    .intro-border-bottom {
+      background: $black;
+      border-bottom: 1px solid $primary-color;
+      bottom: calc(100% - .1rem);
+      height: 100%;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      will-change: transform;
+    }
+
+    .intro-border-top {
+      background: $black;
+      border-top: 1px solid $primary-color;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: calc(100% - .1rem);
+      width: 100%;
+      will-change: transform;
+    }
+  }
+
+  .intro-content {
+    height: 0;
+    left: 50%;
+    overflow: hidden;
+    padding-top: 200%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    width: 100%;
+    z-index: 1;
+
+    @media (min-width: 360px) {
+      padding-top: 140%;
+    }
+
+    @include breakpoint(sm) {
+      padding-top: 100%;
+    }
+  }
+
+  .intro-inner-content {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform-origin: center;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .jef-logo {
+    background-image: url('/images/jef-logo.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 10rem;
+    margin: 0 auto;
+    transform: scale(.8);
+    transform-origin: center;
+    transition: transform .35s ease-in-out;
+    width: 17.6rem;
+    will-change: transform;
+
+    @include breakpoint(sm) {
+      transform: scale(1);
+    }
+  }
+
+  .intro-statement {
+    color: $white;
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: calc(36 / 22);
+    margin-top: 1rem;
+    padding: 0 3rem;
+
+    @include breakpoint(sm) {
+      font-size: 2.2rem;
+      margin-top: 4rem;
+      padding: 0 4rem;
+    }
+
+    .highlight {
+      color: $primary-color;
+    }
+  }
+}
+
+$delay: .25;
+
+.scroll-indicator-animation-wrapper {
+  transform: scale(.8);
+  transition: transform .15s ease-out;
+
+  @include breakpoint(sm) {
+    transform: scale(1);
+  }
+}
+
+.scroll-indicator-animation {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  height: 6rem;
+  left: 50%;
+  margin: 2rem auto 0;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 6rem;
+
+  &::after {
+    color: $white;
+    content: 'Scroll';
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: .12em;
+    opacity: 0;
+    position: absolute;
+    right: -7rem;
+    text-transform: uppercase;
+    top: calc(50% - .5rem);
+    transform: translateY(2rem);
+    transition: opacity .2s linear, transform .2s linear;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @include breakpoint(xs) {
+    margin-top: 3rem;
+  }
+
+  .center-fill {
+    border: 2px solid $primary-color;
+    border-radius: 3rem;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transform: scale(2);
+    transform-origin: center;
+    width: 100%;
+    will-change: opacity, transform;
+  }
+
+  .center-line {
+    background: $white;
+    height: 50%;
+    left: 50%;
+    position: absolute;
+    top: 25%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .15s ease-out delayed-time($delay, .3);
+    width: 1px;
+    will-change: transform;
+  }
+
+  .caret {
+    bottom: 30%;
+    height: 2rem;
+    left: calc(50% + .5px);
+    position: absolute;
+    transform: translateX(-50%) rotate(-45deg);
+    transform-origin: center;
+    width: 2rem;
+  }
+
+  .bottom-left-line {
+    background: $white;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform .15s ease-in-out delayed-time($delay, .4);
+    width: 1px;
+    will-change: transform;
+  }
+
+  .bottom-right-line {
+    background: $white;
+    bottom: 0;
+    box-sizing: border-box;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .15s ease-in-out delayed-time($delay, .4);
+    width: 100%;
+    will-change: transform;
+  }
+}
+
+.scroll-indicator-animation.animate-in {
+
+  .center-line {
+    transform: scaleY(1);
+  }
+
+  .center-fill {
+    animation: center-fill-animate-in .25s ease-in-out delayed-time($delay, .3) forwards;
+  }
+
+  .bottom-left-line {
+    transform: scaleY(1.01);
+  }
+
+  .bottom-right-line {
+    transform: scaleX(1.01);
+  }
+}
+
+.scroll-indicator-animation.animate-loop {
+
+  .center-fill {
+    animation: center-fill-loop 2s linear .2s infinite;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes center-fill-animate-in {
+
+  0% {
+    opacity: 0;
+    transform: scale(2);
+  }
+
+  90% {
+    opacity: 1;
+    transform: scale(.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes center-fill-loop {
+
+  0% {
+    // height: 100%;
+    transform: scale(1);
+  }
+
+  50% {
+    // height: 130%;
+    transform: scale(1.2);
+  }
+
+  100% {
+    // height: 100%;
+    transform: scale(1);
+  }
+}

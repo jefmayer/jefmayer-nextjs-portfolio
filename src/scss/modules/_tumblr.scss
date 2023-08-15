@@ -1,0 +1,115 @@
+.project-animation-tumblr {
+  height: 60rem;
+
+  @include breakpoint(md) {
+    height: 80rem;
+  }
+
+  .fixed-bg {
+    background: rgb(216, 180, 17);
+    background: linear-gradient(0deg, rgba(216, 180, 17, 1) 0%, rgba(249, 216, 67, 1) 100%);
+  }
+
+  .info-card-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10% auto 0;
+    max-width: 102.4rem;
+    width: 100%;
+  }
+
+  .info-card {
+    perspective: 100rem;
+    width: calc(50% - 1em);
+
+    @include breakpoint(sm) {
+      width: calc(33.333% - 1.333em);
+    }
+
+    @include breakpoint(md) {
+      width: calc(20% - 1.5em);
+    }
+  }
+
+  @media (max-width: 576px) {
+
+    .info-card:nth-child(n + 5) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    .info-card:nth-child(n + 7) {
+      display: none;
+    }
+  }
+
+  .info-card-inner {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    height: 24rem;
+    margin-bottom: 1.8rem;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    width: 100%;
+
+    @include breakpoint(md) {
+      height: 24.5rem;
+    }
+
+    @include breakpoint(lg) {
+      height: 26rem;
+    }
+
+    .card-img {
+      height: 10rem;
+      margin-top: 1rem;
+      width: auto;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      margin: .5rem 2rem 1rem;
+    }
+
+    .card-total {
+      border-bottom: .1rem solid $light-gray;
+      color: $mid-gray;
+      font-family: 'Rubik One', 'Muli', Helvetica, Arial, sans-serif;
+      font-size: 3rem;
+      letter-spacing: -.05em;
+      margin-bottom: .5rem;
+
+      @include breakpoint(lg) {
+        font-size: 3.4rem;
+      }
+    }
+
+    .card-interval {
+      font-size: 1.1rem;
+      font-weight: 900;
+      margin-bottom: .2rem;
+      text-transform: uppercase;
+    }
+
+    .card-desc {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.project-details-tumblr {
+  background: rgba(216, 180, 17, .75);
+  background: linear-gradient(0deg, rgba(216, 180, 17, .93) 0%, rgba(249, 216, 67, .93) 100%);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}

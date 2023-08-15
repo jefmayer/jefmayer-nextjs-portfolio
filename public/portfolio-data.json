@@ -1,0 +1,535 @@
+{
+  "sections": [
+    {
+      "assets": [
+        {
+          "alt": "",
+          "css": "video-grid-item",
+          "id": "video-grid-t-l",
+          "hiresSrc": "images/amplifyit/a-video-grid-t-l.gif",
+          "preload": true,
+          "src": "images/amplifyit/video-grid-t-l.png"
+        },
+        {
+          "alt": "",
+          "css": "video-grid-item",
+          "id": "video-grid-t-m",
+          "hiresSrc": "images/amplifyit/a-video-grid-t-m.gif",
+          "preload": true,
+          "src": "images/amplifyit/video-grid-t-m.png"
+        },
+        {
+          "alt": "",
+          "css": "video-grid-item",
+          "id": "video-grid-t-r",
+          "hiresSrc": "images/amplifyit/a-video-grid-t-r.gif",
+          "preload": true,
+          "src": "images/amplifyit/video-grid-t-r.png"
+        },
+        {
+          "alt": "",
+          "css": "video-grid-item",
+          "id": "video-grid-m-l",
+          "hiresSrc": "images/amplifyit/a-video-grid-m-l.gif",
+          "preload": true,
+          "src": "images/amplifyit/video-grid-m-l.png"
+        },
+        {
+          "alt": "",
+          "css": "video-grid-item",
+          "id": "video-grid-m-m",
+          "hiresSrc": "images/amplifyit/a-video-grid-m-m.gif",
+          "preload": true,
+          "src": "images/amplifyit/video-grid-m-m.png"
+        },
+        {
+          "alt": "",
+          "css": "video-grid-item",
+          "id": "video-grid-m-r",
+          "hiresSrc": "images/amplifyit/a-video-grid-m-r.gif",
+          "preload": true,
+          "src": "images/amplifyit/video-grid-m-r.png"
+        },
+        {
+          "alt": "",
+          "css": "video-grid-item",
+          "id": "video-grid-b-l",
+          "hiresSrc": "images/amplifyit/a-video-grid-b-l.gif",
+          "preload": true,
+          "src": "images/amplifyit/video-grid-b-l.png"
+        },
+        {
+          "alt": "",
+          "css": "video-grid-item",
+          "id": "video-grid-b-m",
+          "hiresSrc": "images/amplifyit/a-video-grid-b-m.gif",
+          "preload": true,
+          "src": "images/amplifyit/video-grid-b-m.png"
+        },
+        {
+          "alt": "",
+          "css": "video-grid-item",
+          "id": "video-grid-b-r",
+          "hiresSrc": "images/amplifyit/a-video-grid-b-r.gif",
+          "preload": true,
+          "src": "images/amplifyit/video-grid-b-r.png"
+        },
+        {
+          "alt": "",
+          "css": "",
+          "id": "tablet-sampler",
+          "hiresSrc": "",
+          "preload": true,
+          "src": "images/amplifyit/tablet-sampler.png"
+        },
+        {
+          "alt": "",
+          "css": "",
+          "id": "tablet-sampler-shadow",
+          "hiresSrc": "",
+          "preload": true,
+          "src": "images/amplifyit/tablet-sampler-shadow.png"
+        },
+        {
+          "alt": "",
+          "css": "",
+          "id": "mixing-board",
+          "hiresSrc": "",
+          "preload": true,
+          "src": "images/amplifyit/mixing-board.png"
+        },
+        {
+          "alt": "",
+          "css": "",
+          "id": "mixing-board-shadow",
+          "hiresSrc": "",
+          "preload": true,
+          "src": "images/amplifyit/mixing-board-shadow.png"
+        },
+        {
+          "alt": "",
+          "css": "",
+          "id": "beats-headphones",
+          "hiresSrc": "",
+          "preload": true,
+          "src": "images/amplifyit/beats-headphones.png"
+        },
+        {
+          "alt": "",
+          "css": "",
+          "id": "beats-headphones-shadow",
+          "hiresSrc": "",
+          "preload": true,
+          "src": "images/amplifyit/beats-headphones-shadow.png"
+        }
+      ],
+      "client": "Verizon",
+      "id": "amplifyit",
+      "invertText": true,
+      "overview": "The in-store experience showcased the connectivity of the new Samsung Galaxy Tab and Beats headphones. Several audio and visual components needed to be quickly fabricated and programmed for the grand opening of the Verizon Michigan Avenue flagship store.",
+      "projectLink": "",
+      "projectTitlePart1": "AmplifyIt",
+      "projectTitlePart2": "In-store Experience",
+      "role": "Lead Developer",
+      "solution": "Our team created a custom sampler app and a 9-channel mixing board guests used to personalize their mixes. Layering samples and adjusting levels altered the playback of musician videos on a massive 9-screen display. Once finished, mixes were shared to an online playlist."
+    },
+    {
+      "assets": [
+        {
+          "alt": "",
+          "css": "",
+          "id": "laptop",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/graber/laptop.png"
+        },
+        {
+          "alt": "",
+          "css": "screen-content",
+          "id": "laptop-screen-content",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/graber/laptop-screen-content.png"
+        },
+        {
+          "alt": "",
+          "css": "",
+          "id": "laptop-shadow",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/graber/laptop-shadow.png"
+        },
+        {
+          "alt": "",
+          "css": "",
+          "id": "tablet",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/graber/tablet.png"
+        },
+        {
+          "alt": "",
+          "css": "screen-content",
+          "id": "tablet-screen-content",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/graber/tablet-screen-content.png"
+        },
+        {
+          "alt": "",
+          "css": "",
+          "id": "tablet-shadow",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/graber/tablet-shadow.png"
+        }
+      ],
+      "client": "Graber",
+      "id": "graber",
+      "invertText": true,
+      "overview": "Graber, a high-quality, custom window treatment brand sold through dealers, needed an engaging site that allowed consumers to explore their full range of solutions and generated leads for affiliated dealers.",
+      "projectLink": "",
+      "projectTitlePart1": "",
+      "projectTitlePart2": "Consumer Website & Dealer Portal",
+      "role": "Creative Director, JavaScript Developer",
+      "solution": "We positioned the 80-year old Graber brand as a trusted industry leader, building on its legacy of innovation with an updated visual system, refreshed marketing collateral, a responsive dealer portal with real-time sales tools, and a replatformed, redesigned consumer site."
+    },
+    {
+      "assets": [
+        {
+          "alt": "",
+          "css": "screen-content",
+          "id": "screen-content-phone",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/oovoo/screen-content-phone.jpg"
+        },
+        {
+          "alt": "",
+          "css": "device-shadow",
+          "id": "device-shadow-phone",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/oovoo/device-shadow-phone.png"
+        },
+        {
+          "alt": "",
+          "css": "device-buttons",
+          "id": "phone-tab",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/oovoo/phone-tab.svg"
+        },
+        {
+          "alt": "",
+          "css": "device-shadow",
+          "id": "device-shadow-tablet",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/oovoo/device-shadow-tablet.png"
+        },
+        {
+          "alt": "",
+          "css": "",
+          "id": "site-bg",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/oovoo/site-bg.jpg"
+        },
+        {
+          "alt": "",
+          "css": "",
+          "id": "site-hand-drawn-type",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/oovoo/site-hand-drawn-type.png"
+        },
+        {
+          "alt": "",
+          "css": "screen-content",
+          "id": "screen-content-tablet",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/oovoo/screen-content-tablet.jpg"
+        }
+      ],
+      "client": "Oovoo",
+      "id": "oovoo",
+      "invertText": true,
+      "overview": "ooVoo was a pioneering, multi-platform video chat app. Newly acquired, rebranded, and releasing a slate of new product enhancements, ooVoo was ready to compete for more of the market. A new consumer website would be a key component of their brand relaunch.",
+      "projectLink": "",
+      "projectTitlePart1": "",
+      "projectTitlePart2": "Brand & Product Website",
+      "role": "Lead Designer, Front-end Developer",
+      "solution": "Photography, hand-drawn type, and playful animations reinforced the brand promise of human connections. My team built a custom .NET CMS that provided nuanced multilingual support and device-specifc app downloads for the global video chat app."
+    },
+    {
+      "assets": [
+        {
+          "alt": "",
+          "css": "",
+          "id": "kiosk-left",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-left.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-default",
+          "id": "kiosk-left-ux-default",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-left-ux-default.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-bg",
+          "id": "kiosk-left-ux-bg",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-left-ux-bg.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-ui",
+          "id": "kiosk-left-ux-ui",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-left-ux-ui.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-shadow",
+          "id": "kiosk-left-shadow",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-left-shadow.png"
+        },
+        {
+          "alt": "",
+          "css": "",
+          "id": "kiosk-right",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-right.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-default",
+          "id": "kiosk-right-ux-default",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-right-ux-default.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-bg",
+          "id": "kiosk-right-ux-bg",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-right-ux-bg.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-ui-1",
+          "id": "kiosk-right-ux-ui-1",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-right-ux-ui-1.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-ui-2",
+          "id": "kiosk-right-ux-ui-2",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-right-ux-ui-2.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-ui-3",
+          "id": "kiosk-right-ux-ui-3",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-right-ux-ui-3.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-shadow",
+          "id": "kiosk-right-shadow",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-right-shadow.png"
+        }
+      ],
+      "client": "Samsung",
+      "id": "samsung",
+      "invertText": true,
+      "overview": "Samsung installed 65&Prime; touchscreen kiosks at several US airports to promote the Galaxy&rsquo;s NFC capabilities. Travelers could browse an ever-changing content library and download selections to their devices.",
+      "projectLink": "",
+      "projectTitlePart1": "Galaxy",
+      "projectTitlePart2": "Share To Go Kiosk",
+      "role": "Lead Developer",
+      "solution": "Working with a project team split between Chicago and Austin, I developed software to drive the graphics-intense interface, stream videos, and easily facilitate the NFC transfer between the kiosk and users&rsquo; phones."
+    },
+    {
+      "assets": [
+        {
+          "alt": "",
+          "css": "screen-content",
+          "id": "screen-content-home",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/swfcorp/screen-content-home.jpg"
+        },
+        {
+          "alt": "",
+          "css": "device-base",
+          "id": "device-base-left",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/swfcorp/device-base.png"
+        },
+        {
+          "alt": "",
+          "css": "screen-content",
+          "id": "screen-content-products",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/swfcorp/screen-content-products.jpg"
+        },
+        {
+          "alt": "",
+          "css": "device-base",
+          "id": "device-base-right",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/swfcorp/device-base.png"
+        }
+      ],
+      "client": "Springs Window Fashions",
+      "id": "swfcorp",
+      "invertText": true,
+      "overview": "The company&rsquo;s website had lagged behind their other business transformation initiatives. They needed a new site that reflected their updated branding, made relevant information easy to find, and appealed to new talent and potential investors.",
+      "projectLink": "",
+      "projectTitlePart1": "",
+      "projectTitlePart2": "Corporate Website",
+      "role": "Creative Director,Lead Developer",
+      "solution": "My team expanded upon the existing visual language and migrated their SharePoint site to Episerver. New page templates allowed admins to keep content current, updating visitors on modernization efforts, company culture, and community outreach."
+    },
+    {
+      "assets": [
+        {
+          "alt": "",
+          "css": "visualization-overlay-inner",
+          "id": "visualization-overlay-inner",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/trainspotted/resighting-modal.png"
+        }
+      ],
+      "client": "Trainspotted",
+      "id": "trainspotted",
+      "invertText": false,
+      "overview": "Aside from the signal clearance between Chicago commuter trains, there was no set schedule to the freight trains that rumbled by outside my office window. Even so, I wondered if it was possible to observe freight trains making a return trip and to find the average time between repeated sightings.",
+      "projectLink": "",
+      "projectTitlePart1": "Trainspotted",
+      "projectTitlePart2": "React App",
+      "role": "JavaScript Developer",
+      "solution": "I built an app using MERN with Redux and an admin to enter field notes about each train. With the data, I mapped out a data visualization according to day, time, and train line along with a dashboard that sliced and aggregated the data based on the frequency and resightings of each engine."
+    },
+    {
+      "assets": [
+        {
+          "alt": "",
+          "css": "card-img",
+          "id": "meaningful-content-graphic",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/tumblr/meaningful-content-graphic.svg"
+        },
+        {
+          "alt": "",
+          "css": "card-img",
+          "id": "beez-graphic",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/tumblr/beez-graphic.svg"
+        },
+        {
+          "alt": "",
+          "css": "card-img",
+          "id": "doge-graphic",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/tumblr/doge-graphic.svg"
+        },
+        {
+          "alt": "",
+          "css": "card-img",
+          "id": "cx-graphic",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/tumblr/cx-graphic.svg"
+        },
+        {
+          "alt": "",
+          "css": "card-img",
+          "id": "twitter-graphic",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/tumblr/twitter-graphic.svg"
+        },
+        {
+          "alt": "",
+          "css": "card-img",
+          "id": "sox-graphic",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/tumblr/sox-graphic.svg"
+        },
+        {
+          "alt": "",
+          "css": "card-img",
+          "id": "fantasy-graphic",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/tumblr/fantasy-graphic.svg"
+        },
+        {
+          "alt": "",
+          "css": "card-img",
+          "id": "vinyl-graphic",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/tumblr/vinyl-graphic.svg"
+        },
+        {
+          "alt": "",
+          "css": "card-img",
+          "id": "sax-graphic",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/tumblr/sax-graphic.svg"
+        },
+        {
+          "alt": "",
+          "css": "card-img",
+          "id": "prime-graphic",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/tumblr/prime-graphic.svg"
+        }
+      ],
+      "client": "Tumblr",
+      "id": "tumblr",
+      "invertText": false,
+      "overview": "It was difficult to retire the previous interation of this site. A few years back, I (finally) acquired the .com for my name, wanted a site, didn&rsquo;t really have my portfolio together, and didn&rsquo;t want to pay for hosting.",
+      "projectLink": "",
+      "projectTitlePart1": "Tumblr",
+      "projectTitlePart2": "Portfolio",
+      "role": "JavaScript Developer",
+      "solution": "I built a very sentimental site and hosted it on Tumblr. I created a series of datapoints with illustrations and motion graphics tied to each entry, some with dynamic content returned from webservices (MLB, Discogs)."
+    }
+  ]
+}

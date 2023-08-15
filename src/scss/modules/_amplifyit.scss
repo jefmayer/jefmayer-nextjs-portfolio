@@ -1,0 +1,180 @@
+.project-animation-amplifyit {
+  height: 45rem;
+
+  @include breakpoint(sm) {
+    height: 75rem;
+  }
+
+  @include breakpoint(md) {
+    height: 90rem;
+  }
+
+  .fixed-bg {
+    background: rgb(236, 28, 36);
+    background: linear-gradient(0deg, rgba(255, 52, 60, 1) 0%, rgba(236, 28, 36, 1) 100%);
+  }
+
+  .video-grid-wrapper {
+    perspective: 100rem;
+  }
+
+  .video-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 8rem auto 0;
+    max-width: 92.4rem;
+    transform: rotateX(-20deg);
+    width: 100%;
+  }
+
+  .video-grid-item {
+    background: $white;
+    height: 0;
+    margin: translate-width(1.5);
+    overflow: hidden;
+    padding-top: 17.999356356%;
+    transform: scale(1.25);
+    transform-origin: center;
+    visibility: hidden;
+    width: translate-width(305);
+    will-change: transform;
+
+    video,
+    img {
+      height: auto;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  .tablet-sampler-wrapper {
+    margin-top: -16%;
+    position: relative;
+    visibility: hidden;
+    will-change: transform;
+    z-index: 2;
+
+    @include breakpoint(lg) {
+      margin-top: -15rem;
+    }
+  }
+
+  .tablet-sampler {
+    height: auto;
+    margin: 0 auto;
+    max-width: 38.9rem;
+    position: relative;
+    width: translate-width(389);
+    z-index: 2;
+  }
+
+  .tablet-sampler-shadow {
+    bottom: -40%;
+    height: auto;
+    position: absolute;
+    width: 100%;
+    will-change: transform;
+    z-index: 1;
+
+    img {
+      margin: 0 auto;
+      max-width: 38.9rem;
+      width: translate-width(389);
+    }
+  }
+
+  .mixing-board-wrapper {
+    margin-top: 1rem;
+    position: relative;
+    visibility: hidden;
+    will-change: transform;
+    z-index: 1;
+  }
+
+  .mixing-board {
+    height: auto;
+    margin: 0 auto;
+    max-width: 53.4rem;
+    position: relative;
+    width: translate-width(534);
+    z-index: 2;
+  }
+
+  .mixing-board-shadow {
+    bottom: -4%;
+    height: auto;
+    left: 50%;
+    max-width: 53.4rem;
+    position: absolute;
+    transform: translate(-50%);
+    transform-origin: top;
+    width: translate-width(534);
+    will-change: transform;
+    z-index: 1;
+  }
+
+  .beats-headphones-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin: -40% auto 0;
+    max-width: 92.4rem;
+    overflow: hidden;
+    position: relative;
+    visibility: hidden;
+    width: 100%;
+    will-change: transform;
+    z-index: 2;
+
+    > div {
+      position: relative;
+      right: calc(-100% + 153 / 924 * 99%); /* stylelint-disable-line function-calc-no-unspaced-operator */
+      width: 100%;
+
+      @include breakpoint(md) {
+        right: calc(-100% + 15.5rem);
+      }
+    }
+
+    @include breakpoint(lg) {
+      margin-top: -36rem;
+    }
+  }
+
+  .beats-headphones {
+    height: auto;
+    max-width: 15.3rem;
+    position: relative;
+    width: translate-width(153);
+    will-change: transform;
+    z-index: 2;
+  }
+
+  .beats-headphones-shadow {
+    height: auto;
+    margin-top: 2rem;
+    max-width: 12.3rem;
+    opacity: 0;
+    position: relative;
+    transform: scale(1.25);
+    transform-origin: center;
+    width: translate-width(123);
+    will-change: opacity, transform;
+    z-index: 1;
+  }
+}
+
+.project-details-amplifyit {
+  background: rgba(236, 28, 36, .75);
+  background: linear-gradient(0deg, rgba(255, 52, 60, .75) 0%, rgba(236, 28, 36, .75) 100%);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.amplifyit-logo {
+  background-image: url('/images/amplifyit/verizon-logo.svg');
+  height: 2.4rem;
+  width: 11.6rem;
+}

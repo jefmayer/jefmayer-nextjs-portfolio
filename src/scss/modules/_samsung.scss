@@ -1,0 +1,128 @@
+.project-animation-samsung {
+  height: 80rem;
+
+  /* @include breakpoint(sm) {
+    height: 100rem;
+  } */
+
+  @include breakpoint(md) {
+    height: 100rem;
+  }
+
+  .fixed-bg {
+    background: rgb(23, 46, 157);
+    background: linear-gradient(0deg, rgba(42, 79, 255, 1) 0%, rgba(23, 46, 157, 1) 100%);
+  }
+
+  .kiosks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    left: 0;
+    margin-top: 7rem;
+    position: absolute;
+    width: 100%;
+
+    @include breakpoint(md) {
+      margin-top: 0;
+    }
+
+    > div {
+      height: 100%;
+      margin-top: -2%;
+      // width: translate-width(282.5);
+      will-change: transform;
+    }
+
+    .kiosk {
+      height: auto;
+      max-width: 28.25rem;
+      position: relative;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .kiosk-shadow {
+      bottom: -.5%;
+      height: auto;
+      position: absolute;
+      width: 100%;
+      will-change: transform;
+      z-index: 1;
+
+      img {
+        max-width: 28.25rem;
+        width: 100%;
+      }
+    }
+  }
+
+  .kiosk-left-wrapper {
+    width: 50%;
+
+    @include breakpoint(md) {
+      margin-right: 5%;
+      width: translate-width(282.5);
+    }
+
+    .kiosk {
+      float: right;
+    }
+
+    .kiosk-ux-wrapper {
+      left: 16.64%;
+      top: 17.11%;
+      width: 61.24%;
+    }
+
+    .kiosk-shadow img {
+      float: right;
+    }
+  }
+
+  .kiosk-right-wrapper {
+    display: none;
+    margin-left: 5%;
+    width: translate-width(285.5);
+
+    @include breakpoint(md) {
+      display: block;
+    }
+
+    .kiosk-ux-wrapper {
+      left: 21.89%;
+      top: 17.11%;
+      width: 60.77%;
+    }
+  }
+
+  .kiosk {
+    position: relative;
+  }
+
+  .kiosk-ux-wrapper {
+    height: auto;
+    position: absolute;
+  }
+
+  .kiosk-ux {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.project-details-samsung {
+  background: rgba(23, 46, 157, .75);
+  background: linear-gradient(0deg, rgba(42, 79, 255, .75) 0%, rgba(23, 46, 157, .75) 100%);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.samsung-logo {
+  background-image: url('/images/samsung/samsung-logo.svg');
+  height: 2.1rem;
+  width: 13.2rem;
+}
