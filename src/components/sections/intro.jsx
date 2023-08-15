@@ -32,7 +32,6 @@ class Intro extends Component {
   }
 
   componentDidMount() {
-    console.log('intro.jsx, componentDidMount');
     const observer = getScrollObserver();
     const el = this.animationRef.current;
     observer.observe(el);
@@ -66,7 +65,6 @@ class Intro extends Component {
   }
 
   loaderAnimate() {
-    console.log('intro.jsx, loaderAnimate');
     const { triggerElement } = this;
     const controller = getScrollMagicController();
     new ScrollMagic.Scene({

@@ -1,7 +1,7 @@
 const nextConfig = {
   // assetPrefix: '.',
   distDir: 'dist',
-  reactStrictMode: true,
+  // reactStrictMode: true,
   trailingSlash: true,
 };
 

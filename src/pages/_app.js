@@ -9,7 +9,7 @@ import '../scss/layout.scss';
 
 const middleware = [thunk];
 // production
-if (process.env.NODE_ENV !== 'development') {
+if (process.env.NODE_ENV !== 'production') {
   middleware.push(createLogger());
 }
 

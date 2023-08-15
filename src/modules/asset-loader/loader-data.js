@@ -15,7 +15,6 @@ const initLoaderData = (data) => {
       allInitialAssetsLoaded: false,
       assets: section.assets.map((element) => (new LoaderAsset({
         element: document.querySelector(`.${element.id} .add-site-img`),
-        id: element.id,
         isLoaded: false,
         loadStarted: false,
         preload: element.preload,

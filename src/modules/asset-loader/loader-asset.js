@@ -17,9 +17,6 @@ export default class LoaderAsset {
     const { innerWidth } = window;
     const div = this.element;
     let attrLabel = 'data-src';
-    if (!div) {
-      return attrLabel;
-    } 
     // Only those breakpoints under the window width
     const arr = breakpoints.filter((item) => item.value <= innerWidth);
     arr.reverse();
@@ -35,16 +32,6 @@ export default class LoaderAsset {
 
   loadImg(onComplete) {
     const div = this.element;
-    // console.log(this.id);
-    if (!div) {
-      this.isLoaded = true;
-      if (onComplete) {
-        onComplete();
-      } else {
-        onLoadComplete();
-      }
-      return;
-    }
     const img = document.createElement('img');
     const srcAttr = this.getBreakpointLabel();
     const dataSection = div.getAttribute('data-section');

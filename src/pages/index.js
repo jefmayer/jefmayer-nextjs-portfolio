@@ -23,14 +23,12 @@ import Layout from '../components/layout';
 
 class IndexPage extends Component {
   constructor(props) {
-    console.log('index.js, constructor');
     super(props);
     const { dispatch } = this.props;
     initScrollMagicController();
     initScrollObserver({
       onUpdate: (classNames, isIntersecting) => {
         const id = getSectionIdFromClassNames(classNames);
-        // console.log(`${id}, ${isIntersecting}`);
         if (isIntersecting) {
           dispatch(setActiveSection(id));
         }
@@ -45,7 +43,6 @@ class IndexPage extends Component {
   }
 
   componentDidMount() {
-    console.log('index.js, componentDidMount');
     const { dispatch } = this.props;
     dispatch(fetchSiteData('portfolio-data.json'));
   }
