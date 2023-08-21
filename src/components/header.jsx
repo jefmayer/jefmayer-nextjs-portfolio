@@ -6,6 +6,7 @@ import {
   getSceneOffsetPos,
   scrollToPosition,
 } from '../utils/browser-scroll';
+import getSectionComponentMap from './sections/section-manifest';
 import {
   hideMenu,
   setActiveSection,
@@ -109,6 +110,8 @@ class Header extends Component {
     } else {
       this.removeActiveClass();
     }
+    // Get ordered menu nav based on active sections
+    const navItemList = getSectionComponentMap();
     return (
       <header className="header">
         <div className="header-logo" />
@@ -120,7 +123,8 @@ class Header extends Component {
               style={{ top: this.getNavHighlightPos() }}
             />
             <div className="nav-menu-inner">
-              {data.map((section) => {
+              {navItemList.map((navItem) => {
+                const section = data.find(item => item.id === navItem.id);
                 const {
                   client,
                   id,
@@ -152,6 +156,19 @@ class Header extends Component {
                   </React.Fragment>
                 );
               })}
+              <button
+                type="button"
+                className="scene-navigation-btn"
+                role="menuitem"
+                data-scene-name="about"
+                onClick={(e) => this.onNavClick("about", e)}
+                onMouseOver={(e) => this.onMouseOver("about", e)}
+                onFocus={(e) => this.onMouseOver("about", e)}
+                onMouseLeave={this.onMouseLeave}
+              >
+                <span className="heading-md">About</span>
+                <span className="body-regular">Skills & Clients</span>
+              </button>
             </div>
           </div>
           <div className="nav-menu-overlay" />

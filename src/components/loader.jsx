@@ -66,7 +66,6 @@ class Loader extends Component {
 }
 
 Loader.propTypes = {
-  // activeSectionId: PropTypes.string,
   assetLoadComplete: PropTypes.bool.isRequired,
   assetLoadPercentage: PropTypes.number.isRequired,
   assetPreloadComplete: PropTypes.bool.isRequired,

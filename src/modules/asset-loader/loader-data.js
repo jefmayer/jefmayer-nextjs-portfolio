@@ -1,4 +1,5 @@
 import LoaderAsset from './loader-asset';
+import getSectionComponentMap from '../../components/sections/section-manifest';
 
 let siteData = [];
 
@@ -7,9 +8,13 @@ const getLoaderData = () => (
 );
 
 const initLoaderData = (data) => {
+  // Remove section's data if not in manifest
+  const sections = data.filter(section => (
+    getSectionComponentMap().find(item => item.id === section.id)
+  ));
   siteData = {
     isLoadComplete: false,
-    sections: data.map((section) => ({
+    sections: sections.map((section) => ({
       ...section,
       allHiResAssetsLoaded: false,
       allInitialAssetsLoaded: false,

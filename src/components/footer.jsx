@@ -34,30 +34,51 @@ function Footer() {
           <div className="footer-content-locations">
             <h3 className="heading-sm">Where I&rsquo;ve been</h3>
             <div className="flag-wrapper">
-              <div className="oh-flag">
+              <a className="oh-flag" href="https://goo.gl/maps/miAioRNQxuJcd7GX8" target="_blank" rel="noopener noreferrer">
                 <Image
                   alt="Cleveland, Ohio"
                   height="122"
                   src="/images/oh-flag.svg"
                   width="75"
                 />
-              </div>
-              <div className="chi-flag">
+                <Image
+                  alt=""
+                  class="hover-img"
+                  height="122"
+                  src="/images/oh-flag-hover.svg"
+                  width="75"
+                />
+              </a>
+              <a className="chi-flag" href="https://goo.gl/maps/1KW2aYcqQZBzwSw68" target="_blank" rel="noopener noreferrer">
                 <Image
                   alt="Chicago, Illinois"
                   height="105"
                   src="/images/chi-flag.svg"
                   width="65"
                 />
-              </div>
-              <div className="az-flag current">
+                <Image
+                  alt=""
+                  class="hover-img"
+                  height="105"
+                  src="/images/chi-flag-hover.svg"
+                  width="65"
+                />
+              </a>
+              <a className="az-flag current" href="https://goo.gl/maps/9WoriThjHUqHwuA2A" target="_blank" rel="noopener noreferrer">
                 <Image
                   alt="Tucson, Arizona"
                   height="106"
                   src="/images/az-flag.svg"
                   width="65"
                 />
-              </div>
+                <Image
+                  alt=""
+                  class="hover-img"
+                  height="106"
+                  src="/images/az-flag-hover.svg"
+                  width="65"
+                />
+              </a>
             </div>
           </div>
         </div>

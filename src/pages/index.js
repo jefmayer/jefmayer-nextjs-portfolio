@@ -78,7 +78,6 @@ class IndexPage extends Component {
           <meta property="og:type" content="website" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <link rel="canonical" href="https://www.jefmayer.com/" />
-          <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;500;900&family=Rubik+One&display=swap" rel="stylesheet" />
         </Head>
         <Layout>
           {isDataLoaded

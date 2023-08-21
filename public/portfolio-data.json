@@ -138,6 +138,115 @@
         {
           "alt": "",
           "css": "",
+          "id": "kiosk-left",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-left.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-default",
+          "id": "kiosk-left-ux-default",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-left-ux-default.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-bg",
+          "id": "kiosk-left-ux-bg",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-left-ux-bg.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-ui",
+          "id": "kiosk-left-ux-ui",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-left-ux-ui.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-shadow",
+          "id": "kiosk-left-shadow",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-left-shadow.png"
+        },
+        {
+          "alt": "",
+          "css": "",
+          "id": "kiosk-right",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-right.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-default",
+          "id": "kiosk-right-ux-default",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-right-ux-default.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-bg",
+          "id": "kiosk-right-ux-bg",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-right-ux-bg.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-ui-1",
+          "id": "kiosk-right-ux-ui-1",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-right-ux-ui-1.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-ui-2",
+          "id": "kiosk-right-ux-ui-2",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-right-ux-ui-2.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-ux kiosk-ux-ui-3",
+          "id": "kiosk-right-ux-ui-3",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-right-ux-ui-3.png"
+        },
+        {
+          "alt": "",
+          "css": "kiosk-shadow",
+          "id": "kiosk-right-shadow",
+          "hiresSrc": "",
+          "preload": false,
+          "src": "images/samsung/kiosk-right-shadow.png"
+        }
+      ],
+      "client": "Samsung",
+      "id": "samsung",
+      "invertText": true,
+      "overview": "Samsung installed 65′ touchscreen kiosks at several US airports to promote the Galaxy’s NFC capabilities. Travelers could browse an ever-changing content library and download selections to their devices.",
+      "projectLink": "",
+      "projectTitlePart1": "Galaxy",
+      "projectTitlePart2": "Share To Go Kiosk",
+      "role": "Lead Developer",
+      "solution": "Working with a project team split between Chicago and Austin, I developed software to drive the graphics-intense interface, stream videos, and easily facilitate the NFC transfer between the kiosk and users’ phones."
+    },
+    {
+      "assets": [
+        {
+          "alt": "",
+          "css": "",
           "id": "laptop",
           "hiresSrc": "",
           "preload": false,
@@ -263,115 +372,7 @@
       "role": "Lead Designer, Front-end Developer",
       "solution": "Photography, hand-drawn type, and playful animations reinforced the brand promise of human connections. My team built a custom .NET CMS that provided nuanced multilingual support and device-specifc app downloads for the global video chat app."
     },
-    {
-      "assets": [
-        {
-          "alt": "",
-          "css": "",
-          "id": "kiosk-left",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/samsung/kiosk-left.png"
-        },
-        {
-          "alt": "",
-          "css": "kiosk-ux kiosk-ux-default",
-          "id": "kiosk-left-ux-default",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/samsung/kiosk-left-ux-default.png"
-        },
-        {
-          "alt": "",
-          "css": "kiosk-ux kiosk-ux-bg",
-          "id": "kiosk-left-ux-bg",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/samsung/kiosk-left-ux-bg.png"
-        },
-        {
-          "alt": "",
-          "css": "kiosk-ux kiosk-ux-ui",
-          "id": "kiosk-left-ux-ui",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/samsung/kiosk-left-ux-ui.png"
-        },
-        {
-          "alt": "",
-          "css": "kiosk-shadow",
-          "id": "kiosk-left-shadow",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/samsung/kiosk-left-shadow.png"
-        },
-        {
-          "alt": "",
-          "css": "",
-          "id": "kiosk-right",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/samsung/kiosk-right.png"
-        },
-        {
-          "alt": "",
-          "css": "kiosk-ux kiosk-ux-default",
-          "id": "kiosk-right-ux-default",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/samsung/kiosk-right-ux-default.png"
-        },
-        {
-          "alt": "",
-          "css": "kiosk-ux kiosk-ux-bg",
-          "id": "kiosk-right-ux-bg",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/samsung/kiosk-right-ux-bg.png"
-        },
-        {
-          "alt": "",
-          "css": "kiosk-ux kiosk-ux-ui-1",
-          "id": "kiosk-right-ux-ui-1",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/samsung/kiosk-right-ux-ui-1.png"
-        },
-        {
-          "alt": "",
-          "css": "kiosk-ux kiosk-ux-ui-2",
-          "id": "kiosk-right-ux-ui-2",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/samsung/kiosk-right-ux-ui-2.png"
-        },
-        {
-          "alt": "",
-          "css": "kiosk-ux kiosk-ux-ui-3",
-          "id": "kiosk-right-ux-ui-3",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/samsung/kiosk-right-ux-ui-3.png"
-        },
-        {
-          "alt": "",
-          "css": "kiosk-shadow",
-          "id": "kiosk-right-shadow",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/samsung/kiosk-right-shadow.png"
-        }
-      ],
-      "client": "Samsung",
-      "id": "samsung",
-      "invertText": true,
-      "overview": "Samsung installed 65′ touchscreen kiosks at several US airports to promote the Galaxy’s NFC capabilities. Travelers could browse an ever-changing content library and download selections to their devices.",
-      "projectLink": "",
-      "projectTitlePart1": "Galaxy",
-      "projectTitlePart2": "Share To Go Kiosk",
-      "role": "Lead Developer",
-      "solution": "Working with a project team split between Chicago and Austin, I developed software to drive the graphics-intense interface, stream videos, and easily facilitate the NFC transfer between the kiosk and users’ phones."
-    },
+    
     {
       "assets": [
         {
@@ -414,7 +415,7 @@
       "projectLink": "",
       "projectTitlePart1": "",
       "projectTitlePart2": "Corporate Website",
-      "role": "Creative Director,Lead Developer",
+      "role": "Creative Director, Lead Developer",
       "solution": "My team expanded upon the existing visual language and migrated their SharePoint site to Episerver. New page templates allowed admins to keep content current, updating visitors on modernization efforts, company culture, and community outreach."
     },
     {
