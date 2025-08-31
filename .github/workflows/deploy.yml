@@ -24,6 +24,11 @@ jobs:
       - name: Build static export
         run: npm run export
 
+      - name: Verify build output
+        run: |
+          test -d out || (echo "::error ::No 'out' directory was produced" && exit 1)
+          ls -la out | head -n 100
+
       - name: FTP Next Directory
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
@@ -32,66 +37,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ vars.FTP_PORT }}
           protocol: ${{ vars.FTP_PROTOCOL }}
-          local-dir: out/_next
+          local-dir: out/
           server-dir: / 
-          timeout: 60000
-
-      - name: FTP Images Directory
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ vars.FTP_PORT }}
-          protocol: ${{ vars.FTP_PROTOCOL }}
-          local-dir: out/images
-          server-dir: / 
-          timeout: 60000
-
-      - name: FTP JSON
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ vars.FTP_PORT }}
-          protocol: ${{ vars.FTP_PROTOCOL }}
-          local-dir: out/portfolio-data.json
-          server-dir: / 
-          timeout: 60000
-
-      - name: FTP Index
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ vars.FTP_PORT }}
-          protocol: ${{ vars.FTP_PROTOCOL }}
-          local-dir: out/index.html
-          server-dir: / 
-          timeout: 60000
-
-      - name: FTP 404
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ vars.FTP_PORT }}
-          protocol: ${{ vars.FTP_PROTOCOL }}
-          local-dir: out/404.html
-          server-dir: / 
-          timeout: 60000
-
-      - name: FTP 404 Directory
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ vars.FTP_PORT }}
-          protocol: ${{ vars.FTP_PROTOCOL }}
-          local-dir: out/404.html
-          server-dir: / 
-          timeout: 60000
