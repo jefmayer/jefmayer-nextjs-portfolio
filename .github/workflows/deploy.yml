@@ -38,4 +38,4 @@ jobs:
           port: ${{ vars.FTP_PORT }}
           protocol: ${{ vars.FTP_PROTOCOL }}
           local-dir: out/
-          server-dir: / 
+          server-dir: ./
