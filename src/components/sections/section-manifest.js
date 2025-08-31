@@ -2,7 +2,6 @@ import AmplifyIt from './amplifyit';
 import Graber from './graber';
 import Oovoo from './oovoo';
 import Samsung from './samsung';
-import SwfCorp from './swfcorp';
 import Trainspotted from './trainspotted';
 import Tumblr from './tumblr';
 
@@ -23,10 +22,6 @@ const getSectionComponentMap = () => (
     {
       id: 'oovoo',
       SectionComponent: Oovoo,
-    },
-    {
-      id: 'swfcorp',
-      SectionComponent: SwfCorp,
     },
     {
       id: 'trainspotted',

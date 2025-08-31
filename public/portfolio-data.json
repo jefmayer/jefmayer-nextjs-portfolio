@@ -297,7 +297,7 @@
       "id": "graber",
       "invertText": true,
       "overview": "Graber, a high-quality, custom window treatment brand sold through dealers, needed an engaging site that allowed consumers to explore their full range of solutions and generated leads for affiliated dealers.",
-      "projectLink": "",
+      "projectLink": "https://www.graberblinds.com/",
       "projectTitlePart1": "",
       "projectTitlePart2": "Consumer Website & Dealer Portal",
       "role": "Creative Director, JavaScript Developer",
@@ -372,52 +372,6 @@
       "role": "Lead Designer, Front-end Developer",
       "solution": "Photography, hand-drawn type, and playful animations reinforced the brand promise of human connections. My team built a custom .NET CMS that provided nuanced multilingual support and device-specifc app downloads for the global video chat app."
     },
-    
-    {
-      "assets": [
-        {
-          "alt": "",
-          "css": "screen-content",
-          "id": "screen-content-home",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/swfcorp/screen-content-home.jpg"
-        },
-        {
-          "alt": "",
-          "css": "device-base",
-          "id": "device-base-left",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/swfcorp/device-base.png"
-        },
-        {
-          "alt": "",
-          "css": "screen-content",
-          "id": "screen-content-products",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/swfcorp/screen-content-products.jpg"
-        },
-        {
-          "alt": "",
-          "css": "device-base",
-          "id": "device-base-right",
-          "hiresSrc": "",
-          "preload": false,
-          "src": "images/swfcorp/device-base.png"
-        }
-      ],
-      "client": "Springs Window Fashions",
-      "id": "swfcorp",
-      "invertText": true,
-      "overview": "The company’s website had lagged behind their other business transformation initiatives. They needed a new site that reflected their updated branding, made relevant information easy to find, and appealed to new talent and potential investors.",
-      "projectLink": "",
-      "projectTitlePart1": "",
-      "projectTitlePart2": "Corporate Website",
-      "role": "Creative Director, Lead Developer",
-      "solution": "My team expanded upon the existing visual language and migrated their SharePoint site to Episerver. New page templates allowed admins to keep content current, updating visitors on modernization efforts, company culture, and community outreach."
-    },
     {
       "assets": [
         {
@@ -433,7 +387,7 @@
       "id": "trainspotted",
       "invertText": false,
       "overview": "Aside from the signal clearance between Chicago commuter trains, there was no set schedule to the freight trains that rumbled by outside my office window. Even so, I wondered if it was possible to observe freight trains making a return trip and to find the average time between repeated sightings.",
-      "projectLink": "",
+      "projectLink": "https://trainspotted.herokuapp.com/",
       "projectTitlePart1": "Trainspotted",
       "projectTitlePart2": "React App",
       "role": "JavaScript Developer",

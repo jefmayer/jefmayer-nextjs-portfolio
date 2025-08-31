@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import * as React from 'react';
 
-function Footer() {
+function Footer({ currentYear }) {
   return (
     <footer className="footer project-animation-about project-details-about">
       <div className="footer-inner">
@@ -12,11 +12,11 @@ function Footer() {
             <p className="body-regular">
               Fullstack Javascript Development
               <br />
-              MERN, NextJs, Gatsby
+              NextJs, Modern Web Frameworks
               <br />
-              EPiServer .NET Devlopment
+              .NET Web Dev, Platform-Based Solutions
               <br />
-              PHP & Wordpress Development
+              PHP, Wordpress Development
               <br />
               Responsive Site Design & UX
               <br />
@@ -29,7 +29,7 @@ function Footer() {
           </div>
           <div className="footer-content-clients">
             <h3 className="heading-sm">Who I&rsquo;ve worked with</h3>
-            <p className="body-regular">AKQA, EssenceGlobal, GTB, Jack Morton, Legendary Creatures, McCann, Octagon, Real Art, Sapient, AlpineStars, Cisco, Chrysler, Ford, GM, Harley-Davidson, HBO, Hilton, LG, Motorola, Progressive, Samsung, Sony, Springs Window Fashions, Verizon</p>
+            <p className="body-regular">AKQA, EssenceGlobal, GTB, Jack&nbsp;Morton, Legendary&nbsp;Creatures, McCann, Octagon, Real&nbsp;Art, Sapient, AlpineStars, Cisco, Chrysler, Ford, GM, Harley-Davidson, HBO, Hilton, LG, Motorola, Progressive, Samsung, Sony, Springs&nbsp;Window&nbsp;Fashions, Verizon</p>
           </div>
           <div className="footer-content-locations">
             <h3 className="heading-sm">Where I&rsquo;ve been</h3>
@@ -163,7 +163,7 @@ function Footer() {
           </li>
         </ul>
         <div className="copyright-content">
-          <p className="body-sm">&copy;2023 Jef Mayer</p>
+          <p className="body-sm">&copy;{currentYear} Jef Mayer</p>
         </div>
       </div>
     </footer>

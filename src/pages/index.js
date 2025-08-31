@@ -58,6 +58,7 @@ class IndexPage extends Component {
       isMenuOpen,
     } = this.props;
     const isDataLoaded = data.length > 0;
+    const currentYear = new Date().getFullYear();
     return (
       <>
         <Head>
@@ -116,7 +117,9 @@ class IndexPage extends Component {
                   />
                 );
               })}
-              <Footer />
+              <Footer
+                currentYear={currentYear}
+              />
             </>
           )}
         </Layout>

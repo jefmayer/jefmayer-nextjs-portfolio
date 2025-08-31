@@ -167,7 +167,7 @@ class Header extends Component {
                 onMouseLeave={this.onMouseLeave}
               >
                 <span className="heading-md">About</span>
-                <span className="body-regular">Skills & Clients</span>
+                <span className="body-regular">Skills &amp; Clients</span>
               </button>
             </div>
           </div>
