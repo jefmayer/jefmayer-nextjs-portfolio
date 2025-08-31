@@ -30,8 +30,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
-          protocol: ${{ secrets.FTP_PROTOCOL }}
+          port: ${{ vars.FTP_PORT }}
+          protocol: ${{ vars.FTP_PROTOCOL }}
           local-dir: out/_next
           server-dir: / 
           timeout: 60000
@@ -42,8 +42,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
-          protocol: ${{ secrets.FTP_PROTOCOL }}
+          port: ${{ vars.FTP_PORT }}
+          protocol: ${{ vars.FTP_PROTOCOL }}
           local-dir: out/images
           server-dir: / 
           timeout: 60000
@@ -54,8 +54,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
-          protocol: ${{ secrets.FTP_PROTOCOL }}
+          port: ${{ vars.FTP_PORT }}
+          protocol: ${{ vars.FTP_PROTOCOL }}
           local-dir: out/portfolio-data.json
           server-dir: / 
           timeout: 60000
@@ -66,8 +66,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
-          protocol: ${{ secrets.FTP_PROTOCOL }}
+          port: ${{ vars.FTP_PORT }}
+          protocol: ${{ vars.FTP_PROTOCOL }}
           local-dir: out/index.html
           server-dir: / 
           timeout: 60000
@@ -78,8 +78,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
-          protocol: ${{ secrets.FTP_PROTOCOL }}
+          port: ${{ vars.FTP_PORT }}
+          protocol: ${{ vars.FTP_PROTOCOL }}
           local-dir: out/404.html
           server-dir: / 
           timeout: 60000
@@ -90,8 +90,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
-          protocol: ${{ secrets.FTP_PROTOCOL }}
+          port: ${{ vars.FTP_PORT }}
+          protocol: ${{ vars.FTP_PROTOCOL }}
           local-dir: out/404.html
           server-dir: / 
           timeout: 60000
