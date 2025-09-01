@@ -1,10 +1,8 @@
 const nextConfig = {
-  // assetPrefix: '.',
-  distDir: 'dist',
   images: {
     unoptimized: true,
   },
-  // reactStrictMode: true,
+  output: 'export',
   trailingSlash: true,
 };
 
