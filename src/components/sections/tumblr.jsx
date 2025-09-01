@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ScrollMagic from 'scrollmagic';
+// import ScrollMagic from 'scrollmagic';
 import { TimelineLite } from 'gsap';
 import { commaFormattedNumber } from '../../utils/formatting-utils';
 import { getCollectionWeight } from '../../api/discogs';
@@ -32,6 +32,7 @@ class Tumblr extends Component {
     this.vinylCardTotal = 0;
     this.saxCardTotal = getTimeBetweenDates(today, new Date('2009-04-01'), getInterval('years'));
     this.primeCardTotal = 37;
+    this.ScrollMagic = null;
   }
 
   componentDidMount() {
@@ -52,6 +53,11 @@ class Tumblr extends Component {
         this.vinylCardTotal = result;
       },
     });
+    if (typeof window === 'undefined') return;
+    (async () => {
+      const mod = await import('scrollmagic');
+      this.ScrollMagic = mod.default ?? mod;
+    })();
   }
 
   addTweens() {
@@ -76,6 +82,7 @@ class Tumblr extends Component {
   animate() {
     const { data } = this.props;
     const { id } = data;
+    const { ScrollMagic } = this;
     const triggerElement = `.project-animation-${id}`;
     const controller = getScrollMagicController();
     const timelines = {

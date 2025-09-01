@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ScrollMagic from 'scrollmagic';
+// import ScrollMagic from 'scrollmagic';
 import { TimelineLite } from 'gsap';
 import { getImageDataById } from '../../utils/section-utils';
 import { getScrollMagicController } from '../../utils/scroll-magic';
@@ -16,6 +16,7 @@ class Oovoo extends Component {
     this.animationRef = React.createRef();
     this.initAnimate = false;
     this.tabletWrapperRef = React.createRef();
+    this.ScrollMagic = null;
   }
 
   componentDidMount() {
@@ -29,11 +30,17 @@ class Oovoo extends Component {
       window.addEventListener('resize', adjustTabletHeight);
     }
     adjustTabletHeight();
+    if (typeof window === 'undefined') return;
+    (async () => {
+      const mod = await import('scrollmagic');
+      this.ScrollMagic = mod.default ?? mod;
+    })();
   }
 
   animate() {
     const { data } = this.props;
     const { id } = data;
+    const { ScrollMagic } = this;
     const triggerElement = `.project-animation-${id}`;
     const controller = getScrollMagicController();
     const timelines = {
@@ -95,7 +102,7 @@ class Oovoo extends Component {
       projectTitlePart2,
       solution,
     } = data;
-    if (assetPreloadComplete && !this.initAnimate) {
+    if (assetPreloadComplete && !this.initAnimate && this.ScrollMagic !== null) {
       this.initAnimate = true;
       this.animate();
     }

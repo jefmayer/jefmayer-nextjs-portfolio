@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ScrollMagic from 'scrollmagic';
+// import ScrollMagic from 'scrollmagic';
 import { TimelineLite } from 'gsap';
 import { getImageDataById } from '../../utils/section-utils';
 import { getScrollMagicController } from '../../utils/scroll-magic';
@@ -14,12 +14,18 @@ class Trainspotted extends Component {
     this.animate = this.animate.bind(this);
     this.animationRef = React.createRef();
     this.initAnimate = false;
+    this.ScrollMagic = null;
   }
 
   componentDidMount() {
     const observer = getScrollObserver();
     const el = this.animationRef.current;
     observer.observe(el);
+    if (typeof window === 'undefined') return;
+    (async () => {
+      const mod = await import('scrollmagic');
+      this.ScrollMagic = mod.default ?? mod;
+    })();
   }
 
   addTweens() {
@@ -68,6 +74,7 @@ class Trainspotted extends Component {
   animate() {
     const { data } = this.props;
     const { id } = data;
+    const { ScrollMagic } = this;
     const triggerElement = `.project-animation-${id}`;
     const controller = getScrollMagicController();
     const timelines = {

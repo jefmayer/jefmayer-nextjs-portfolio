@@ -33,6 +33,7 @@ class AmplifyIt extends Component {
   animate() {
     const { data } = this.props;
     const { id } = data;
+    const { ScrollMagic } = this;
     const triggerElement = `.project-animation-${id}`;
     const controller = getScrollMagicController();
     const timelines = {
@@ -56,26 +57,26 @@ class AmplifyIt extends Component {
         .fromTo(`${triggerElement} .video-grid`, 3, { rotateX: '0deg' }, { rotateX: '-20deg' }, 0.5),
     };
 
-    new this.ScrollMagic.Scene({
+    new ScrollMagic.Scene({
       triggerElement,
       duration: 1500,
     }).setClassToggle(triggerElement, 'in-focus')
       .addTo(controller);
 
-    new this.ScrollMagic.Scene({
+    new ScrollMagic.Scene({
       triggerElement,
       duration: 600,
       triggerHook: 0,
     }).setPin(`${triggerElement} .section-content`)
       .addTo(controller);
 
-    new this.ScrollMagic.Scene({
+    new ScrollMagic.Scene({
       triggerElement,
       duration: 300,
     }).setTween(timelines.videoGrid)
       .addTo(controller);
 
-    new this.ScrollMagic.Scene({
+    new ScrollMagic.Scene({
       triggerElement,
       duration: 800,
     }).setTween(timelines.elements)

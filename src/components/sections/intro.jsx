@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import ScrollMagic from 'scrollmagic';
+// import ScrollMagic from 'scrollmagic';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { TimelineLite } from 'gsap';
@@ -28,6 +28,7 @@ class Intro extends Component {
     this.initAnimate = false;
     this.scrollIndicatorSelector = '';
     this.introBordersStyle = {};
+    this.ScrollMagic = null;
     document.body.classList.add('site-loading');
   }
 
@@ -35,7 +36,12 @@ class Intro extends Component {
     const observer = getScrollObserver();
     const el = this.animationRef.current;
     observer.observe(el);
-    this.loaderAnimate();
+    if (typeof window === 'undefined') return;
+    (async () => {
+      const mod = await import('scrollmagic');
+      this.ScrollMagic = mod.default ?? mod;
+      this.loaderAnimate();
+    })();
   }
 
   onAssetPreloadComplete() {
@@ -65,7 +71,7 @@ class Intro extends Component {
   }
 
   loaderAnimate() {
-    const { triggerElement } = this;
+    const { ScrollMagic, triggerElement } = this;
     const controller = getScrollMagicController();
     new ScrollMagic.Scene({
       triggerElement,
@@ -77,7 +83,7 @@ class Intro extends Component {
 
   animate() {
     const { dispatch } = this.props;
-    const { triggerElement } = this;
+    const { ScrollMagic, triggerElement } = this;
     const controller = getScrollMagicController();
     const timelines = {
       introRotate: new TimelineLite()
@@ -118,7 +124,7 @@ class Intro extends Component {
     if (assetPreloadPercentage < 1) {
       this.introBordersStyle = { transform: `rotate(0) scaleX(${assetPreloadPercentage})` };
     }
-    if (assetPreloadComplete && !this.initAnimate) {
+    if (assetPreloadComplete && !this.initAnimate && this.ScrollMagic !== null) {
       this.initAnimate = true;
       this.onAssetPreloadComplete();
     }
