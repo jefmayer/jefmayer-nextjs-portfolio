@@ -1,6 +1,8 @@
+'use client';
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ScrollMagic from 'scrollmagic';
+// import ScrollMagic from 'scrollmagic';
 import { TimelineLite } from 'gsap';
 import { getImageDataById } from '../../utils/section-utils';
 import { getScrollMagicController } from '../../utils/scroll-magic';
@@ -14,12 +16,18 @@ class AmplifyIt extends Component {
     this.animate = this.animate.bind(this);
     this.animationRef = React.createRef();
     this.initAnimate = false;
+    this.ScrollMagic = null;
   }
 
   componentDidMount() {
     const observer = getScrollObserver();
     const el = this.animationRef.current;
     observer.observe(el);
+    if (typeof window === 'undefined') return;
+    (async () => {
+      const mod = await import('scrollmagic');
+      this.ScrollMagic = mod.default ?? mod;
+    })();
   }
 
   animate() {
@@ -48,26 +56,26 @@ class AmplifyIt extends Component {
         .fromTo(`${triggerElement} .video-grid`, 3, { rotateX: '0deg' }, { rotateX: '-20deg' }, 0.5),
     };
 
-    new ScrollMagic.Scene({
+    new this.ScrollMagic.Scene({
       triggerElement,
       duration: 1500,
     }).setClassToggle(triggerElement, 'in-focus')
       .addTo(controller);
 
-    new ScrollMagic.Scene({
+    new this.ScrollMagic.Scene({
       triggerElement,
       duration: 600,
       triggerHook: 0,
     }).setPin(`${triggerElement} .section-content`)
       .addTo(controller);
 
-    new ScrollMagic.Scene({
+    new this.ScrollMagic.Scene({
       triggerElement,
       duration: 300,
     }).setTween(timelines.videoGrid)
       .addTo(controller);
 
-    new ScrollMagic.Scene({
+    new this.ScrollMagic.Scene({
       triggerElement,
       duration: 800,
     }).setTween(timelines.elements)
@@ -88,7 +96,7 @@ class AmplifyIt extends Component {
       projectTitlePart2,
       solution,
     } = data;
-    if (assetPreloadComplete && !this.initAnimate) {
+    if (assetPreloadComplete && !this.initAnimate && this.ScrollMagic !== null) {
       this.initAnimate = true;
       this.animate();
     }
