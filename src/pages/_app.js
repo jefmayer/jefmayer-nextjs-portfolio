@@ -1,26 +1,32 @@
 /* eslint-disable react/function-component-definition, react/prop-types */
 import React from 'react';
-import thunk from 'redux-thunk';
+import { configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
-import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from '../reducers';
 import '../scss/layout.scss';
 
-const middleware = [thunk];
-// production
-if (process.env.NODE_ENV !== 'production') {
-  middleware.push(createLogger());
-}
-
-const store = createStore(
+const store = configureStore({
   reducer,
-  applyMiddleware(...middleware),
-);
+  devTools: process.env.NODE_ENV !== 'production',
+  middleware: (getDefaultMiddleware) =>{
+    const mws = getDefaultMiddleware();
+    if (
+      process.env.NODE_ENV !== 'production' &&
+      typeof window !== 'undefined'
+    ) {
+      const { createLogger } = require('redux-logger');
+      mws.push(createLogger({ collapsed: true, duration: true }));
+    }
+    return mws;
+  },
+});
 
-export default ({ Component, pageProps }) => (
+const App = ({ Component, pageProps }) => (
   <Provider store={store}>
     <Component {...pageProps} />
   </Provider>
 );
+App.displayName = 'App';
+export default App;
 /* eslint-disable react/function-component-definition, react/prop-types */

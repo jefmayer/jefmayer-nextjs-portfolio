@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-// import ScrollMagic from 'scrollmagic';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { TimelineLite } from 'gsap';

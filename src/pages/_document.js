@@ -11,6 +11,7 @@ export default function Document() {
           src="https://www.googletagmanager.com/gtag/js?id=G-EQQJ5ZYNEG"
         />
         <Script
+          id="gtm"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `

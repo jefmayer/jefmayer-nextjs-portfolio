@@ -1,5 +1,5 @@
 /* eslint-disable default-param-last */
-import { combineReducers } from 'redux';
+import { combineReducers } from '@reduxjs/toolkit';
 import {
   ASSET_LOAD_COMPLETE,
   ASSET_LOAD_PERCENTAGE,

@@ -1,13 +1,16 @@
 # jefmayer-nextjs-portfolio
 ```bash
-nvm use 16.8.0
+nvm use 22.19.0
 ```
 
 Todos
 - Add sections
-    - Springs Window Fashions
-        - Animation idea: Use stylized, tabbed browser frame interface to introduce featured websites. Include Graber, Vitale, SunSetter, Horizons, Mecho, SWFcontract
+    - SunSetter
+    - PABT
     - BRT Strava App
-        - Animation idea: Perspective box scrolling through app
-    - BRT Kit
-        - Animation idea: Video background
+    - BRT Jerseys
+-  Complete migration from redux to @reduxjs/toolkit
+    - Update bindActionCreators pattern 
+- Migrate to ESLint CLI
+- Create icon, add Goodreads to social icon bar
+- Add ©25 to social icon bar

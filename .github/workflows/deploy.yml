@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: Install deps
@@ -24,8 +24,13 @@ jobs:
       - name: Build static export
         run: npm run build
 
-      - name: Verify build output
-        run: |
-          test -d out || (echo "::error ::No 'out' directory was produced" && exit 1)
-          ls -la out | head -n 100
-
+      - name: FTP Next Directory
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ vars.FTP_PORT }}
+          protocol: ${{ vars.FTP_PROTOCOL }}
+          local-dir: out/
+          server-dir: ./
