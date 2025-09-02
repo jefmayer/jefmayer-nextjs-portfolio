@@ -1,4 +1,3 @@
-/* eslint-disable react/function-component-definition, react/prop-types */
 import React from 'react';
 import { configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
@@ -15,7 +14,6 @@ const store = configureStore({
       process.env.NODE_ENV !== 'production' &&
       typeof window !== 'undefined'
     ) {
-      const { createLogger } = require('redux-logger');
       mws.push(createLogger({ collapsed: true, duration: true }));
     }
     return mws;
@@ -29,4 +27,3 @@ const App = ({ Component, pageProps }) => (
 );
 App.displayName = 'App';
 export default App;
-/* eslint-disable react/function-component-definition, react/prop-types */

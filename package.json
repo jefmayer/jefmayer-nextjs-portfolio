@@ -3,7 +3,7 @@
   "description": "Single page scrolling portfolio built using NextJs",
   "version": "1.2.0",
   "author": "Jef Mayer",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
