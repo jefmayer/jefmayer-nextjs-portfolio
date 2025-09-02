@@ -83,6 +83,9 @@ function Footer({ currentYear }) {
           </div>
         </div>
         <ul className="social-nav">
+          <li class="copyright-content">
+            <span>&copy;{currentYear.toString().substring(2)}</span>
+          </li>
           <li>
             <a
               className="instagram-link"
@@ -162,9 +165,6 @@ function Footer({ currentYear }) {
             </a>
           </li>
         </ul>
-        <div className="copyright-content">
-          <p className="body-sm">&copy;{currentYear} Jef Mayer</p>
-        </div>
       </div>
     </footer>
   );

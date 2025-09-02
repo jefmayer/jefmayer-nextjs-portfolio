@@ -248,8 +248,17 @@
     }
   }
 
-  .copyright-content {
-    margin-top: 3rem;
-    text-align: center;
+  li.copyright-content {
+    width: 33%;
+
+    span {
+      color: $primary-color;
+      font-size: 2.4rem;
+      font-weight: bold;
+      left: 0;
+      padding: .5rem 0;
+      position: absolute;
+      top: 0;
+    }
   }
 }
