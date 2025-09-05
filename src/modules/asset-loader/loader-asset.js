@@ -13,10 +13,8 @@ export default class LoaderAsset {
   }
 
   getUrl() {
+    if (this.element === null) return '';
     const div = this.element;
-    if (div === null) {
-      return '';
-    }
     const minWidth = breakpoints.find((item) => item.label === 'md').value;
     const src = div.getAttribute('data-src');
     const hiResSrc = div.getAttribute('data-hires-src');
@@ -27,10 +25,8 @@ export default class LoaderAsset {
   }
 
   initLoad() {
+    if (this.element === null) return;
     const div = this.element;
-    if (div === null) {
-      return;
-    }
     const img = document.createElement('img');
     const dataSection = div.getAttribute('data-section');
     const that = this;
