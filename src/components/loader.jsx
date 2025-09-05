@@ -12,7 +12,8 @@ import {
   getPreloadAssetData,
   initLoaderData,
 } from '../modules/asset-loader/loader-data';
-import { initAssetPreloader } from '../modules/asset-loader/asset-preloader';
+import { imageWorker, loadAssetSets } from '../modules/asset-loader/concurrent-asset-loader';
+
 
 class Loader extends Component {
   constructor(props) {
@@ -24,23 +25,27 @@ class Loader extends Component {
   componentDidMount() {
     const { data, dispatch } = this.props;
     initLoaderData(data);
-    initAssetPreloader({
+    const loader = loadAssetSets({
       preloadAssetData: getPreloadAssetData(),
       mainAssetData: getMainAssetData(),
+      worker: imageWorker,
       onPreloadComplete: () => {
         dispatch(setAssetPreloadComplete());
       },
-      onLoadComplete: () => {
+      onMainLoadComplete: () => {
         this.bgLoaderRef.current.classList.remove('show');
         dispatch(setAssetLoadComplete());
       },
-      onLoadUpdate: (value) => {
-        dispatch(setAssetLoadPercentage(value));
+      onMainLoadUpdate: (data) => {
+        const { percent } = data;
+        dispatch(setAssetLoadPercentage(percent));
       },
-      onPreloadUpdate: (value) => {
-        dispatch(setAssetPreloadPercentage(value));
+      onPreloadUpdate: (data) => {
+        const { percent } = data;
+        dispatch(setAssetPreloadPercentage(percent));
       },
     });
+    loader.run();
   }
 
   render() {

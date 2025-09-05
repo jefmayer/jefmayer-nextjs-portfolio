@@ -8,8 +8,8 @@ const attempt = async (fn, retries = 0, delay = 0) => {
   }
 };
 
-const pool = async (urls, limit, worker, { onUpdate, signal, retry = 0, retryDelay = 0 } = {}) => {
-  const total = urls.length;
+const pool = async (assets, limit, worker, { onUpdate, signal, retry = 0, retryDelay = 0 } = {}) => {
+  const total = assets.length;
   if (!total) return [];
   let completed = 0;
   const results = new Array(total);
@@ -19,9 +19,10 @@ const pool = async (urls, limit, worker, { onUpdate, signal, retry = 0, retryDel
   const startNext = () => {
     if (signal?.aborted || index >= total) return;
     const i = index++;
-    const url = urls[i];
+    const asset = assets[i];
+    const url = asset.getUrl();
 
-    const p = attempt(() => worker(url, { signal }), retry, retryDelay)
+    const p = attempt(() => worker(asset, { signal }), retry, retryDelay)
       .then(value => { results[i] = { status: 'fulfilled', value, url }; })
       .catch(reason => { results[i] = { status: 'rejected', reason, url }; })
       .finally(() => {
@@ -45,19 +46,19 @@ const pool = async (urls, limit, worker, { onUpdate, signal, retry = 0, retryDel
   return results;
 };
 
-const fetchWorker = async (url, { signal } = {}) => {
+const fetchWorker = async (asset, { signal } = {}) => {
+  const url = asset.getUrl();
   const res = await fetch(url, { signal, credentials: 'omit', cache: 'default' });
   if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
   await res.arrayBuffer();
   return true;
 };
 
-const imageWorker = (url, { signal } = {}) =>
+const imageWorker = (asset, { signal } = {}) =>
   new Promise((resolve, reject) => {
-    const img = new Image();
     let aborted = false;
     const cleanup = () => {
-      img.onload = null; img.onerror = null;
+      asset.onload = null; asset.onerror = null;
       signal?.removeEventListener?.('abort', onAbort);
     };
     const onAbort = () => { aborted = true; cleanup(); reject(new DOMException('Aborted', 'AbortError')); };
@@ -65,16 +66,14 @@ const imageWorker = (url, { signal } = {}) =>
       if (signal.aborted) return onAbort();
       signal.addEventListener('abort', onAbort, { once: true });
     }
-    img.decoding = 'async';
-    img.fetchPriority = 'low';
-    img.onload = () => { if (!aborted) { cleanup(); resolve({ width: img.naturalWidth, height: img.naturalHeight }); } };
-    img.onerror = () => { cleanup(); reject(new Error(`Image failed ${url}`)); };
-    img.src = url;
+    asset.onload = () => { if (!aborted) { cleanup(); resolve(); } };
+    asset.onerror = () => { cleanup(); reject(new Error(`Image failed ${asset.getUrl()}`)); };
+    asset.initLoad();
   });
 
 const loadAssetSets = ({
-  preloadAssetUrls = [],
-  mainAssetUrls = [],
+  preloadAssetData = [],
+  mainAssetData = [],
   preloadLimit = 4,
   mainLimit = 8,
   onPreloadUpdate,
@@ -96,12 +95,12 @@ const loadAssetSets = ({
   }
 
   const run = async () => {
-    const pre = await pool(preloadAssetUrls, preloadLimit, worker, {
+    const pre = await pool(preloadAssetData, preloadLimit, worker, {
       onUpdate: onPreloadUpdate, signal: preloadController.signal, retry, retryDelay,
     });
     onPreloadComplete?.(pre);
 
-    const main = await pool(mainAssetUrls, mainLimit, worker, {
+    const main = await pool(mainAssetData, mainLimit, worker, {
       onUpdate: onMainLoadUpdate, signal: mainController.signal, retry, retryDelay,
     });
     onMainLoadComplete?.(main);
