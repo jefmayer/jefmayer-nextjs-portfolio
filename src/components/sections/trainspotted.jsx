@@ -116,10 +116,7 @@ class Trainspotted extends Component {
   }
 
   render() {
-    const {
-      assetPreloadComplete,
-      data,
-    } = this.props;
+    const { data } = this.props;
     const {
       id,
       invertText,
@@ -136,7 +133,7 @@ class Trainspotted extends Component {
       cefx: 'rgb(11, 118, 215)',
       soo: 'rgb(136, 6, 13)',
     };
-    if (assetPreloadComplete && !this.initAnimate) {
+    if (!this.initAnimate && this.ScrollMagic !== null) {
       this.initAnimate = true;
       this.animate();
     }
@@ -499,7 +496,6 @@ class Trainspotted extends Component {
 }
 
 Trainspotted.propTypes = {
-  assetPreloadComplete: PropTypes.bool.isRequired,
   data: PropTypes.shape({
     id: PropTypes.string.isRequired,
     invertText: PropTypes.bool.isRequired,

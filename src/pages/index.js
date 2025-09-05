@@ -111,7 +111,6 @@ class IndexPage extends Component {
                 return (
                   <SectionComponent
                     assetLoadComplete={assetLoadComplete}
-                    assetPreloadComplete={assetPreloadComplete}
                     data={getSectionById(id, data)}
                     key={id}
                   />

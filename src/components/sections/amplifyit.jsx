@@ -84,10 +84,7 @@ class AmplifyIt extends Component {
   }
 
   render() {
-    const {
-      assetPreloadComplete,
-      data,
-    } = this.props;
+    const { data} = this.props;
     const {
       id,
       invertText,
@@ -97,7 +94,7 @@ class AmplifyIt extends Component {
       projectTitlePart2,
       solution,
     } = data;
-    if (assetPreloadComplete && !this.initAnimate && this.ScrollMagic !== null) {
+    if (!this.initAnimate && this.ScrollMagic !== null) {
       this.initAnimate = true;
       this.animate();
     }
@@ -183,7 +180,6 @@ class AmplifyIt extends Component {
 }
 
 AmplifyIt.propTypes = {
-  assetPreloadComplete: PropTypes.bool.isRequired,
   data: PropTypes.shape({
     id: PropTypes.string.isRequired,
     invertText: PropTypes.bool.isRequired,

@@ -1,14 +1,8 @@
 import {
-  disableScroll,
-  enableScroll,
-} from '../../utils/browser-scroll';
-import {
-  getActiveSectionId,
   getLoaderData,
   updateSectionData,
   updateLoaderData,
 } from './loader-data';
-import hiresAssetLoader from './hires-asset-loader';
 
 const callbacks = {
   onLoadComplete: null,
@@ -17,6 +11,9 @@ const callbacks = {
   onPreloadUpdate: null,
 };
 
+const preloadAssetData = [];
+const mainAssetData = [];
+
 const isSectionAssetLoadComplete = (data, id) => (
   data
     .find((section) => section.id === id)
@@ -24,27 +21,15 @@ const isSectionAssetLoadComplete = (data, id) => (
     .length === 0
 );
 
-// Add param to allow jumping the queue
 const getNextAssetInQueue = () => {
-  const data = getLoaderData();
-  const { selectedSection, sections } = data;
-  // If section specified, get that section's assets
-  if (selectedSection !== '') {
-    const nextAssetToLoad = sections.find((section) => section.id === selectedSection)
-      .assets.find((asset) => !asset.isLoaded && !asset.loadStarted);
-    // If there are still assets to load in that section, load,
-    // otherwise return to load queue
-    if (nextAssetToLoad) {
-      return nextAssetToLoad;
-    }
-    // Reset selected section var
-    updateLoaderData({ selectedSection: '' });
-    enableScroll();
+  let asset = preloadAssetData.find((asset) => !asset.isLoaded && !asset.loadStarted);
+  if (asset) {
+    return asset;
   }
-  return sections
-    .map((section) => section.assets)
-    .reduce((a, b) => a.concat(b), [])
-    .find((asset) => !asset.isLoaded && !asset.loadStarted);
+  asset = mainAssetData.find((asset) => !asset.isLoaded && !asset.loadStarted);
+  if (asset) {
+    return asset;
+  }
 };
 
 const removeSectionEventHandlers = (assets) => {
@@ -87,20 +72,6 @@ const getPreloadAssetsTotal = (data) => (
     .length
 );
 
-const addHiResAssets = (data) => {
-  const assetList = document.querySelectorAll('.site-asset');
-  const hiResAsssets = [...assetList]
-    .filter((asset) => asset.getAttribute('data-section') === data.id && asset.getAttribute('data-hires-src'))
-    .map((element) => ({
-      element,
-      isLoaded: false,
-    }));
-  updateSectionData({
-    id: data.id,
-    hiResAsssets,
-  });
-};
-
 const onLoadComplete = () => {
   updateLoaderData({ isLoadComplete: true });
   if (callbacks.onLoadComplete) {
@@ -111,23 +82,6 @@ const onLoadComplete = () => {
 const onPreloadComplete = () => {
   if (callbacks.onPreloadComplete) {
     callbacks.onPreloadComplete();
-  }
-};
-
-const updateAssetPreloader = () => {
-  const activeSection = getActiveSectionId();
-  const data = getLoaderData();
-  const { selectedSection } = data;
-  if (!activeSection) {
-    return;
-  }
-  if (
-    (!activeSection.allPreloadAssetsLoaded && selectedSection === '')
-    || (!activeSection.allPreloadAssetsLoaded && selectedSection === activeSection.id)
-  ) {
-    disableScroll();
-  } else {
-    enableScroll();
   }
 };
 
@@ -163,15 +117,6 @@ const update = () => {
         allPreloadAssetsLoaded: true,
         id: section.id,
       });
-      addHiResAssets(section);
-      // Start background load of hi-res image assets, if any
-      hiresAssetLoader(section, () => {
-        updateSectionData({
-          allHiResAssetsLoaded: true,
-          id: section.id,
-        });
-      });
-      updateAssetPreloader();
       if (index === 0) {
         onPreloadComplete();
       }
@@ -188,7 +133,11 @@ const initAssetPreloader = (options) => {
   callbacks.onLoadUpdate = options.onLoadUpdate;
   callbacks.onPreloadComplete = options.onPreloadComplete;
   callbacks.onPreloadUpdate = options.onPreloadUpdate;
-  // Multi-threaded loader
+  preloadAssetData.push(...options.preloadAssetData);
+  mainAssetData.push(...options.mainAssetData);
+  console.log(preloadAssetData);
+  console.log(mainAssetData);
+  // Simulated multi-threaded loader
   update();
   update();
   update();
@@ -196,5 +145,4 @@ const initAssetPreloader = (options) => {
 
 export {
   initAssetPreloader,
-  updateAssetPreloader,
 };

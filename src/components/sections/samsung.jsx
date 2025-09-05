@@ -68,10 +68,7 @@ class Samsung extends Component {
   }
 
   render() {
-    const {
-      assetPreloadComplete,
-      data,
-    } = this.props;
+    const { data } = this.props;
     const {
       id,
       invertText,
@@ -81,7 +78,7 @@ class Samsung extends Component {
       projectTitlePart2,
       solution,
     } = data;
-    if (assetPreloadComplete && !this.initAnimate) {
+    if (!this.initAnimate && this.ScrollMagic !== null) {
       this.initAnimate = true;
       this.animate();
     }
@@ -160,7 +157,6 @@ class Samsung extends Component {
 }
 
 Samsung.propTypes = {
-  assetPreloadComplete: PropTypes.bool.isRequired,
   data: PropTypes.shape({
     id: PropTypes.string.isRequired,
     invertText: PropTypes.bool.isRequired,

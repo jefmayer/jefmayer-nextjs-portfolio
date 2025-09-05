@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
@@ -8,7 +7,11 @@ import {
   setAssetPreloadComplete,
   setAssetPreloadPercentage,
 } from '../actions';
-import { initLoaderData } from '../modules/asset-loader/loader-data';
+import {
+  getMainAssetData,
+  getPreloadAssetData,
+  initLoaderData,
+} from '../modules/asset-loader/loader-data';
 import { initAssetPreloader } from '../modules/asset-loader/asset-preloader';
 
 class Loader extends Component {
@@ -22,6 +25,8 @@ class Loader extends Component {
     const { data, dispatch } = this.props;
     initLoaderData(data);
     initAssetPreloader({
+      preloadAssetData: getPreloadAssetData(),
+      mainAssetData: getMainAssetData(),
       onPreloadComplete: () => {
         dispatch(setAssetPreloadComplete());
       },
@@ -75,12 +80,13 @@ Loader.propTypes = {
 
 const mapDispatchToProps = (dispatch) => ({
   dispatch,
-  ...bindActionCreators({
-    setAssetLoadComplete,
-    setAssetLoadPercentage,
-    setAssetPreloadComplete,
-    setAssetPreloadPercentage,
-  }, dispatch),
+  setAssetLoadComplete,
+  setAssetLoadPercentage,
+  setAssetPreloadComplete,
+  setAssetPreloadPercentage,
 });
 
-export default connect(mapDispatchToProps)(Loader);
+export default connect(
+  null,
+  mapDispatchToProps,
+)(Loader);

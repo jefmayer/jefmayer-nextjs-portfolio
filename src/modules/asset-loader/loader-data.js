@@ -16,20 +16,14 @@ const initLoaderData = (data) => {
     isLoadComplete: false,
     sections: sections.map((section) => ({
       ...section,
-      allHiResAssetsLoaded: false,
-      allInitialAssetsLoaded: false,
       assets: section.assets.map((element) => (new LoaderAsset({
         element: document.querySelector(`.${element.id} .add-site-img`),
         isLoaded: false,
         loadStarted: false,
         preload: element.preload,
       }))),
-      hiResAsssets: [],
-      isActive: false,
     })),
-    selectedSection: '',
   };
-  // console.log(siteData);
 };
 
 const updateLoaderData = (options) => {
@@ -37,7 +31,6 @@ const updateLoaderData = (options) => {
     const [prop, value] = arr;
     siteData[prop] = value;
   });
-  // console.log(siteData);
 };
 
 const updateSectionData = (options) => {
@@ -49,7 +42,6 @@ const updateSectionData = (options) => {
       const [prop, value] = arr;
       section[prop] = value;
     });
-    // console.log(siteData);
   }
 };
 
@@ -57,12 +49,23 @@ const getSectionById = (id) => (
   siteData.sections.find((section) => section.id === id)
 );
 
-const getActiveSectionId = () => (
-  siteData.sections.find((section) => section.isActive)
+const getPreloadAssetData = () => (
+  siteData.sections
+    .map((section) => section.assets)
+    .reduce((a, b) => a.concat(b), [])
+    .filter((asset) => asset.preload)
+);
+
+const getMainAssetData = () => (
+  siteData.sections
+    .map((section) => section.assets)
+    .reduce((a, b) => a.concat(b), [])
+    .filter((asset) => !asset.preload)
 );
 
 export {
-  getActiveSectionId,
+  getMainAssetData,
+  getPreloadAssetData,
   getSectionById,
   getLoaderData,
   initLoaderData,

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { TimelineLite } from 'gsap';
 import {
@@ -142,8 +141,8 @@ class Intro extends Component {
                 <div>
                   <div className="jef-logo" />
                   <h1 className="intro-statement">
-                    <span className="highlight"> 👋 &nbsp;I create innovative solutions elevated by great design. </span>
-                    I&rsquo;ve collaborated with talented, multi-disciplined teams to develop engaging interactive experiences.
+                    <span className="highlight">👋&nbsp;I create innovative solutions elevated by great design. </span>
+                    I work across multi-disciplined teams to develop engaging interactive experiences.
                   </h1>
                   <div className="scroll-indicator-animation-wrapper">
                     <button
@@ -180,9 +179,11 @@ Intro.propTypes = {
 
 const mapDispatchToProps = (dispatch) => ({
   dispatch,
-  ...bindActionCreators({
-    hideMenu,
-  }, dispatch),
+  hideMenu,
 });
 
-export default connect(mapDispatchToProps)(Intro);
+export default connect(
+  null,
+  mapDispatchToProps,
+)(Intro);
+

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import {
   getSceneOffsetPos,
@@ -207,11 +206,12 @@ Header.propTypes = {
 
 const mapDispatchToProps = (dispatch) => ({
   dispatch,
-  ...bindActionCreators({
-    hideMenu,
-    setActiveSection,
-    showMenu,
-  }, dispatch),
+  hideMenu,
+  setActiveSection,
+  showMenu,
 });
 
-export default connect(mapDispatchToProps)(Header);
+export default connect(
+  null,
+  mapDispatchToProps,
+)(Header);

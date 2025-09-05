@@ -89,10 +89,7 @@ class Oovoo extends Component {
   }
 
   render() {
-    const {
-      assetPreloadComplete,
-      data,
-    } = this.props;
+    const { data } = this.props;
     const {
       id,
       invertText,
@@ -102,7 +99,7 @@ class Oovoo extends Component {
       projectTitlePart2,
       solution,
     } = data;
-    if (assetPreloadComplete && !this.initAnimate && this.ScrollMagic !== null) {
+    if (!this.initAnimate && this.ScrollMagic !== null) {
       this.initAnimate = true;
       this.animate();
     }
@@ -176,7 +173,6 @@ class Oovoo extends Component {
 }
 
 Oovoo.propTypes = {
-  assetPreloadComplete: PropTypes.bool.isRequired,
   data: PropTypes.shape({
     id: PropTypes.string.isRequired,
     invertText: PropTypes.bool.isRequired,

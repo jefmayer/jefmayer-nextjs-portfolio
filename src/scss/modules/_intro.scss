@@ -135,13 +135,14 @@
     color: $white;
     font-size: 2rem;
     font-weight: normal;
-    line-height: calc(36 / 22);
-    margin-top: 1rem;
+    line-height: 1.5;
+    margin-top: .6rem;
     padding: 0 3rem;
+    text-align: center;
 
     @include breakpoint(sm) {
-      font-size: 2.2rem;
-      margin-top: 4rem;
+      font-size: 2.7rem;
+      margin-top: 3rem;
       padding: 0 4rem;
     }
 

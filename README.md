@@ -9,8 +9,7 @@ Todos
     - PABT
     - BRT Strava App
     - BRT Jerseys
--  Complete migration from redux to @reduxjs/toolkit
-    - Update bindActionCreators pattern 
-- Migrate to ESLint CLI
-- Create icon, add Goodreads to social icon bar
-- Add ©25 to social icon bar
+- Remove link from Trainspotted React App
+- Fix asset loader
+    - Make asset loaders multi-threaded
+    - Look at not displaying the menu until all assets are loaded?

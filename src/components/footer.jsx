@@ -43,7 +43,7 @@ function Footer({ currentYear }) {
                 />
                 <Image
                   alt=""
-                  class="hover-img"
+                  className="hover-img"
                   height="122"
                   src="/images/oh-flag-hover.svg"
                   width="75"
@@ -58,7 +58,7 @@ function Footer({ currentYear }) {
                 />
                 <Image
                   alt=""
-                  class="hover-img"
+                  className="hover-img"
                   height="105"
                   src="/images/chi-flag-hover.svg"
                   width="65"
@@ -73,7 +73,7 @@ function Footer({ currentYear }) {
                 />
                 <Image
                   alt=""
-                  class="hover-img"
+                  className="hover-img"
                   height="106"
                   src="/images/az-flag-hover.svg"
                   width="65"
@@ -83,7 +83,7 @@ function Footer({ currentYear }) {
           </div>
         </div>
         <ul className="social-nav">
-          <li class="copyright-content">
+          <li className="copyright-content">
             <span>&copy;{currentYear.toString().substring(2)}</span>
           </li>
           <li>
