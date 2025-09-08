@@ -1,4 +1,4 @@
-.project-animation-graber {
+.project-animation-vitale {
   height: 50rem;
 
   @include breakpoint(sm) {
@@ -10,8 +10,8 @@
   }
 
   .fixed-bg {
-    background: rgb(148, 161, 135);
-    background: linear-gradient(0deg, rgba(136, 190, 199, 1) 0%, rgba(148, 161, 135, 1) 100%);
+    background: rgb(138, 183, 213);
+    background: linear-gradient(0deg, rgba(214, 227, 233, 1) 0%, rgba(138, 183, 213, 1) 100%);
   }
 
   .devices {
@@ -28,10 +28,6 @@
     margin-top: 22%;
     position: relative;
     will-change: transform;
-
-    /* @include breakpoint(sm) {
-      margin-top: 16%;
-    } */
 
     @include breakpoint(md) {
       margin-top: 8%;
@@ -56,7 +52,6 @@
     }
 
     .screen-content-wrapper-inner {
-      // background: $black;
       height: 0;
       left: 0;
       overflow: hidden;
@@ -128,7 +123,6 @@
     }
 
     .tablet-content-wrapper-inner {
-      // background: $black;
       height: 0;
       left: 0;
       overflow: hidden;
@@ -168,15 +162,15 @@
   }
 }
 
-.project-details-graber {
-  background: rgba(148, 161, 135, .75);
-  background: linear-gradient(0deg, rgba(136, 190, 199, .75) 0%, rgba(148, 161, 135, .75) 100%);
+.project-details-vitale {
+  background: rgba(138, 183, 213, .75);
+  background: linear-gradient(0deg, rgba(214, 227, 233, .75) 0%, rgba(138, 183, 213, 1) 100%);
   background-attachment: fixed;
   background-size: 100% 100%;
 }
 
-.graber-logo {
-  background-image: url('/images/graber/graber-logo.svg');
-  height: 2.5rem;
-  width: 14.9rem;
+.vitale-logo {
+  background-image: url('/images/vitale/vitale-logo.svg');
+  height: 4.3rem;
+  width: 15.1rem;
 }

@@ -10,7 +10,7 @@ import { getScrollObserver } from '../../utils/browser-scroll';
 import ProjectDetails from './project-details';
 import SiteImage from '../site-image';
 
-class Graber extends Component {
+class Vitale extends Component {
   constructor(props) {
     super(props);
     this.animate = this.animate.bind(this);
@@ -148,7 +148,7 @@ class Graber extends Component {
   }
 }
 
-Graber.propTypes = {
+Vitale.propTypes = {
   data: PropTypes.shape({
     id: PropTypes.string.isRequired,
     invertText: PropTypes.bool.isRequired,
@@ -160,4 +160,4 @@ Graber.propTypes = {
   }),
 };
 
-export default Graber;
+export default Vitale;

@@ -1,5 +1,5 @@
 import AmplifyIt from './amplifyit';
-import Graber from './graber';
+import Vitale from './vitale';
 import Oovoo from './oovoo';
 import Samsung from './samsung';
 import Trainspotted from './trainspotted';
@@ -16,8 +16,8 @@ const getSectionComponentMap = () => (
       SectionComponent: Samsung,
     },
     {
-      id: 'graber',
-      SectionComponent: Graber,
+      id: 'vitale',
+      SectionComponent: Vitale,
     },
     {
       id: 'oovoo',

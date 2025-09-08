@@ -250,7 +250,7 @@
           "id": "laptop",
           "hiresSrc": "",
           "preload": false,
-          "src": "images/graber/laptop.png"
+          "src": "images/vitale/laptop.png"
         },
         {
           "alt": "",
@@ -258,7 +258,7 @@
           "id": "laptop-screen-content",
           "hiresSrc": "",
           "preload": false,
-          "src": "images/graber/laptop-screen-content.png"
+          "src": "images/vitale/laptop-screen-content.png"
         },
         {
           "alt": "",
@@ -266,7 +266,7 @@
           "id": "laptop-shadow",
           "hiresSrc": "",
           "preload": false,
-          "src": "images/graber/laptop-shadow.png"
+          "src": "images/vitale/laptop-shadow.png"
         },
         {
           "alt": "",
@@ -274,7 +274,7 @@
           "id": "tablet",
           "hiresSrc": "",
           "preload": false,
-          "src": "images/graber/tablet.png"
+          "src": "images/vitale/tablet.png"
         },
         {
           "alt": "",
@@ -282,7 +282,7 @@
           "id": "tablet-screen-content",
           "hiresSrc": "",
           "preload": false,
-          "src": "images/graber/tablet-screen-content.png"
+          "src": "images/vitale/tablet-screen-content.png"
         },
         {
           "alt": "",
@@ -290,18 +290,18 @@
           "id": "tablet-shadow",
           "hiresSrc": "",
           "preload": false,
-          "src": "images/graber/tablet-shadow.png"
+          "src": "images/vitale/tablet-shadow.png"
         }
       ],
-      "client": "Graber",
-      "id": "graber",
-      "invertText": true,
-      "overview": "Graber, a high-quality, custom window treatment brand sold through dealers, needed an engaging site that allowed consumers to explore their full range of solutions and generated leads for affiliated dealers.",
-      "projectLink": "https://www.graberblinds.com/",
+      "client": "Vitale",
+      "id": "vitale",
+      "invertText": false,
+      "overview": "Our client was launching a new brand aimed at price-conscious consumers. The initial goal was to build awareness and generate interest, with the longer-term plan to pivot the brand site toward direct-to-consumer sales.",
+      "projectLink": "https://www.vitaleblinds.com/",
       "projectTitlePart1": "",
       "projectTitlePart2": "Consumer Website & Dealer Portal",
       "role": "Creative Director, JavaScript Developer",
-      "solution": "We positioned the 80-year old Graber brand as a trusted industry leader, building on its legacy of innovation with an updated visual system, refreshed marketing collateral, a responsive dealer portal with real-time sales tools, and a replatformed, redesigned consumer site."
+      "solution": "Vitale was built in Optimizely Commerce. A custom integration synced the product catalog from the client’s PIM and powered product style pages and the swatch-ordering cart. Product configuration and checkout was framed-out for future DTC functionality."
     },
     {
       "assets": [
