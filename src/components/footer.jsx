@@ -88,15 +88,15 @@ function Footer({ currentYear }) {
           </li>
           <li>
             <a
-              className="instagram-link"
-              href="https://www.instagram.com/modeseventyeight"
+              className="linkedin-link"
+              href="https://www.linkedin.com/in/jefmayer"
               rel="noreferrer"
               style={{
-                backgroundImage: 'url(/images/instagram-icon.svg)',
+                backgroundImage: 'url(/images/linkedin-icon.svg)',
               }}
               target="_blank"  
             >
-              Instagram
+              LinkedIn
             </a>
           </li>
           <li>
@@ -114,41 +114,15 @@ function Footer({ currentYear }) {
           </li>
           <li>
             <a
-              className="linkedin-link"
-              href="https://www.linkedin.com/in/jefmayer"
+              className="medium-link"
+              href="https://medium.com/@jefmayer"
               rel="noreferrer"
               style={{
-                backgroundImage: 'url(/images/linkedin-icon.svg)',
+                backgroundImage: 'url(/images/medium-icon.svg)',
               }}
               target="_blank"  
             >
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a
-              className="zwift-link"
-              href="https://zwiftpower.com/profile.php?z=1002258"
-              rel="noreferrer"
-              style={{
-                backgroundImage: 'url(/images/zwift-icon.svg)',
-              }}
-              target="_blank"  
-            >
-              Zwift
-            </a>
-          </li>
-          <li>
-            <a
-              className="discogs-link"
-              href="https://www.discogs.com/user/jefmayer/collection"
-              rel="noreferrer"
-              style={{
-                backgroundImage: 'url(/images/discogs-icon.svg)',
-              }}
-              target="_blank"  
-            >
-              Discogs
+              Medium
             </a>
           </li>
           <li>
@@ -162,6 +136,19 @@ function Footer({ currentYear }) {
               target="_blank"  
             >
               Github
+            </a>
+          </li>
+          <li>
+            <a
+              className="discogs-link"
+              href="https://www.discogs.com/user/jefmayer/collection"
+              rel="noreferrer"
+              style={{
+                backgroundImage: 'url(/images/discogs-icon.svg)',
+              }}
+              target="_blank"  
+            >
+              Discogs
             </a>
           </li>
         </ul>
