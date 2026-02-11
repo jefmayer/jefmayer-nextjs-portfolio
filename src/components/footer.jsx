@@ -7,6 +7,10 @@ function Footer({ currentYear }) {
       <div className="footer-inner">
         <h2 className="heading-lg">About</h2>
         <div className="footer-content">
+          <div className="footer-content-clients">
+            <h3 className="heading-sm">Who I&rsquo;ve worked with</h3>
+            <p className="body-regular">AKQA, EssenceMediacom, Jack&nbsp;Morton, Legendary&nbsp;Creatures, McCann, Octagon, Publicis&nbsp;Sapient, Real&nbsp;Art, AlpineStars, Cisco, Chrysler, Ford, GM, Harley-Davidson, HBO, Hilton, LG, Motorola, Progressive, Samsung, Sony, Springs&nbsp;Window&nbsp;Fashions, Verizon</p>
+          </div>
           <div className="footer-content-skills">
             <h3 className="heading-sm">What I do well</h3>
             <p className="body-regular">
@@ -24,12 +28,10 @@ function Footer({ currentYear }) {
               <br />
               SEO & Martech Integration
               <br />
+              Thought Leadership & Technical Writing
+              <br />
               Creative Design
             </p>
-          </div>
-          <div className="footer-content-clients">
-            <h3 className="heading-sm">Who I&rsquo;ve worked with</h3>
-            <p className="body-regular">AKQA, EssenceGlobal, GTB, Jack&nbsp;Morton, Legendary&nbsp;Creatures, McCann, Octagon, Real&nbsp;Art, Sapient, AlpineStars, Cisco, Chrysler, Ford, GM, Harley-Davidson, HBO, Hilton, LG, Motorola, Progressive, Samsung, Sony, Springs&nbsp;Window&nbsp;Fashions, Verizon</p>
           </div>
           <div className="footer-content-locations">
             <h3 className="heading-sm">Where I&rsquo;ve been</h3>
