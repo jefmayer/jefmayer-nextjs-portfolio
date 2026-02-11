@@ -387,7 +387,7 @@
       "id": "trainspotted",
       "invertText": false,
       "overview": "Aside from the signal clearance between Chicago commuter trains, there was no set schedule to the freight trains that rumbled by outside my office window. Even so, I wondered if it was possible to observe freight trains making a return trip and to find the average time between repeated sightings.",
-      "projectLink": "",
+      "projectLink": "https://trainspotted.jefmayer.com/",
       "projectTitlePart1": "Trainspotted",
       "projectTitlePart2": "React App",
       "role": "JavaScript Developer",
