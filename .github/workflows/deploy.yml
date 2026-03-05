@@ -22,7 +22,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/jefmayer-portfolio:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/main-site:latest
   deploy:
     needs: build-and-push
     runs-on: ubuntu-latest
@@ -35,6 +35,6 @@ jobs:
           key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
           script: |
             cd ~/portfolio
-            docker compose pull jefmayer-portfolio
-            docker compose up -d jefmayer-portfolio
+            docker compose pull main-site
+            docker compose up -d main-site
             docker image prune -f
