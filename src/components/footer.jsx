@@ -14,7 +14,7 @@ function Footer({ currentYear }) {
           <div className="footer-content-skills">
             <h3 className="heading-sm">What I do well</h3>
             <p className="body-regular">
-              Fullstack Javascript Development
+              Fullstack Javascript Dev
               <br />
               NextJs, Modern Web Frameworks
               <br />
