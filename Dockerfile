@@ -16,7 +16,6 @@ COPY package*.json ./
 RUN npm install
 
 COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/out ./out
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/src ./src
 COPY --from=builder /app/.eslintrc.json ./.eslintrc.json
