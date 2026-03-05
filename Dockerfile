@@ -9,10 +9,11 @@ COPY . .
 RUN npm run build
 
 FROM node:22.19.0-slim
+RUN apt-get update && apt-get install -y curl git && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 COPY package*.json ./
 
-RUN npm install && install -y git
+RUN npm install
 
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/out ./out
