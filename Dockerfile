@@ -12,7 +12,7 @@ FROM node:22.19.0-slim
 WORKDIR /app
 COPY package*.json ./
 
-RUN npm install
+RUN npm install && install -y git
 
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/out ./out
@@ -24,6 +24,6 @@ COPY --from=builder /app/next.config.js ./next.config.js
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/postcss.config.js ./
 
-EXPOSE 5001
+EXPOSE 3000
 ENV NODE_ENV=production
 CMD ["npm", "start"]
