@@ -1,7 +1,7 @@
 {
   "name": "jefmayer-nextjs-portfolio",
   "description": "Single page scrolling portfolio built using NextJs",
-  "version": "1.2.0",
+  "version": "2.0.1",
   "author": "Jef Mayer",
   "private": false,
   "scripts": {
