@@ -31,12 +31,15 @@
       }
     }
 
-    .footer-content-clients {
+    .footer-content-skills {
       margin-top: 3rem;
 
       @include breakpoint(sm) {
         margin-top: 0;
       }
+    }
+
+    .footer-content-clients {    
 
       p {
         margin: 0 auto;
