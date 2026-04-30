@@ -1,3 +1,7 @@
+@use '../base/variables' as vars;
+@use '../base/breakpoints' as bp;
+@use '../base/functions' as fn;
+
 $delay: 0;
 
 .section-loader-wrapper {
@@ -11,7 +15,7 @@ $delay: 0;
   width: 100%;
   z-index: 1;
 
-  @include breakpoint(sm) {
+  @include bp.breakpoint(sm) {
     transform: scale(1);
   }
 }
@@ -29,12 +33,12 @@ $delay: 0;
   transform: translate(-50%, -50%);
   width: 6rem;
 
-  @include breakpoint(xs) {
+  @include bp.breakpoint(xs) {
     margin-top: 3rem;
   }
 
   .center-fill {
-    border: 2px solid $primary-color;
+    border: 2px solid vars.$primary-color;
     border-radius: 3rem;
     bottom: 0;
     height: 100%;
@@ -51,7 +55,7 @@ $delay: 0;
 .section-loader-animation.animate-in {
 
   .center-fill {
-    animation: center-fill-animate-in .25s ease-in-out delayed-time($delay, .3) forwards;
+    animation: center-fill-animate-in .25s ease-in-out fn.delayed-time($delay, .3) forwards;
   }
 }
 
@@ -75,8 +79,8 @@ $delay: 0;
 
   .asset-loader::after {
     animation: ldr-dual-ring .75s linear infinite;
-    border: .2rem solid $light-gray;
-    border-color: $light-gray transparent $light-gray transparent;
+    border: .2rem solid vars.$light-gray;
+    border-color: vars.$light-gray transparent vars.$light-gray transparent;
     border-radius: 50%;
     content: '';
     display: block;
@@ -145,7 +149,7 @@ $delay: 0;
     z-index: 100;
 
     &::before {
-      background-color: $black;
+      background-color: vars.$black;
       content: '';
       height: 100%;
       left: 0;

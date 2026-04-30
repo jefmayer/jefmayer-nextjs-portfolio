@@ -1,7 +1,10 @@
+@use '../base/variables' as vars;
+@use '../base/breakpoints' as bp;
+
 .project-animation-tumblr {
   height: 60rem;
 
-  @include breakpoint(md) {
+  @include bp.breakpoint(md) {
     height: 80rem;
   }
 
@@ -24,11 +27,11 @@
     perspective: 100rem;
     width: calc(50% - 1em);
 
-    @include breakpoint(sm) {
+    @include bp.breakpoint(sm) {
       width: calc(33.333% - 1.333em);
     }
 
-    @include breakpoint(md) {
+    @include bp.breakpoint(md) {
       width: calc(20% - 1.5em);
     }
   }
@@ -48,7 +51,7 @@
   }
 
   .info-card-inner {
-    background-color: $white;
+    background-color: vars.$white;
     display: flex;
     flex-direction: column;
     height: 24rem;
@@ -57,11 +60,11 @@
     transform-style: preserve-3d;
     width: 100%;
 
-    @include breakpoint(md) {
+    @include bp.breakpoint(md) {
       height: 24.5rem;
     }
 
-    @include breakpoint(lg) {
+    @include bp.breakpoint(lg) {
       height: 26rem;
     }
 
@@ -82,14 +85,14 @@
     }
 
     .card-total {
-      border-bottom: .1rem solid $light-gray;
-      color: $mid-gray;
+      border-bottom: .1rem solid vars.$light-gray;
+      color: vars.$mid-gray;
       font-family: 'Rubik One', 'Muli', Helvetica, Arial, sans-serif;
       font-size: 3rem;
       letter-spacing: -.05em;
       margin-bottom: .5rem;
 
-      @include breakpoint(lg) {
+      @include bp.breakpoint(lg) {
         font-size: 3.4rem;
       }
     }

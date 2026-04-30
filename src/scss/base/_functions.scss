@@ -1,0 +1,7 @@
+@function translate-width($pixelValue) {
+  @return calc($pixelValue / 924) * 99%;
+}
+
+@function delayed-time($delay, $value) {
+  @return ($delay + $value) + s;
+}

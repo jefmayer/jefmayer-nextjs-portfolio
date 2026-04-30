@@ -1,5 +1,7 @@
+@use '../base/variables' as vars;
+
 .background-loader-wrapper {
-  background-color: $white;
+  background-color: vars.$white;
   height: .1rem;
   position: fixed;
   top: 0;
@@ -14,7 +16,7 @@
 }
 
 .background-loader-progress-bar {
-  background-color: $primary-color;
+  background-color: vars.$primary-color;
   height: 100%;
   position: absolute;
   transform: scaleX(0);

@@ -1,10 +1,13 @@
+@use '../base/variables' as vars;
+@use '../base/breakpoints' as bp;
+
 .site-loading {
   height: 100%;
   overflow: hidden;
 }
 
 .heading-sm {
-  color: $white;
+  color: vars.$white;
   font-size: 1.1rem;
   font-weight: 900;
   letter-spacing: .12em;
@@ -13,7 +16,7 @@
 }
 
 .heading-xs {
-  color: $white;
+  color: vars.$white;
   font-size: .8rem;
   font-weight: 900;
   letter-spacing: .1em;
@@ -22,7 +25,7 @@
 }
 
 .heading-lg {
-  color: $white;
+  color: vars.$white;
   font-size: 4.2rem;
   font-weight: 200;
   line-height: 1.15;
@@ -31,28 +34,28 @@
   strong {
     font-weight: 500;
 
-    @include breakpoint(md) {
+  @include bp.breakpoint(md) {
       display: block;
     }
   }
 }
 
 .heading-md {
-  color: $white;
+  color: vars.$white;
   font-size: 2.4rem;
   font-weight: 500;
   line-height: 1.15;
 }
 
 .body-regular {
-  color: $white;
+  color: vars.$white;
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 2;
 }
 
 .body-sm {
-  color: $white;
+  color: vars.$white;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.6;

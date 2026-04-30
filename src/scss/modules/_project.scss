@@ -1,3 +1,6 @@
+@use '../base/variables' as vars;
+@use '../base/breakpoints' as bp;
+
 .project-animation {
   position: relative;
   width: 100%;
@@ -22,7 +25,7 @@
 }
 
 .section-top-indicator {
-  border-top: .2rem solid $white;
+  border-top: .2rem solid vars.$white;
   opacity: 0;
   position: relative;
   z-index: 3;
@@ -34,7 +37,7 @@
   width: 100% !important; /* stylelint-disable-line declaration-no-important */
   z-index: 2;
 
-  @include breakpoint(lg) {
+  @include bp.breakpoint(lg) {
     padding: 0;
   }
 }
@@ -76,7 +79,7 @@
     position: relative;
     width: 100%;
 
-    @include breakpoint(sm) {
+    @include bp.breakpoint(sm) {
 
       > div {
         margin-bottom: 0;
@@ -91,7 +94,7 @@
       }
     }
 
-    @include breakpoint(md) {
+    @include bp.breakpoint(md) {
 
       > div {
         margin-bottom: 0;
@@ -106,7 +109,7 @@
       }
     }
 
-    @include breakpoint(lg) {
+    @include bp.breakpoint(lg) {
       padding: 5rem 0;
     }
 
@@ -144,13 +147,13 @@
     text-transform: uppercase;
 
     span {
-      color: $white;
+      color: vars.$white;
       display: inline-block;
       transition: transform .2s ease-in-out, opacity .2s ease-in-out;
       will-change: transform;
 
       &::before {
-        border-bottom: .2rem solid $white;
+        border-bottom: .2rem solid vars.$white;
         bottom: -.4rem;
         content: '';
         position: absolute;
@@ -163,7 +166,7 @@
     }
 
     &::after {
-      border-top: 1px solid $white;
+      border-top: 1px solid vars.$white;
       content: '';
       margin-left: .5rem;
       margin-top: .5rem;
@@ -175,7 +178,7 @@
     }
 
     &::before {
-      border-top: 1px solid $white;
+      border-top: 1px solid vars.$white;
       content: '';
       left: -150%;
       margin-left: -.5rem;
@@ -223,23 +226,23 @@
   &.inverted {
 
     > span::before {
-      border-top-color: $dark;
+      border-top-color: vars.$dark;
     }
 
     > span::after {
-      border-top-color: $dark;
+      border-top-color: vars.$dark;
     }
 
     > span span {
-      color: $dark;
+      color: vars.$dark;
     }
 
     > span span::before {
-      border-bottom-color: $dark;
+      border-bottom-color: vars.$dark;
     }
   }
 }
 
 .inverted {
-  color: $dark !important; /* stylelint-disable-line declaration-no-important */
+  color: vars.$dark !important; /* stylelint-disable-line declaration-no-important */
 }

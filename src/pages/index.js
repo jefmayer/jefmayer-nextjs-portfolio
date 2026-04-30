@@ -77,7 +77,7 @@ class IndexPage extends Component {
           <meta name="twitter:site" content="Jef Mayer" />
           <meta name="twitter:image:alt" content="Jef Mayer is a Tucson-based creative and digital technology consultant focusing on website development and designing interactive experiences" />
           <meta property="og:type" content="website" />
-          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="mobile-web-app-capable" content="yes" />
           <link rel="canonical" href="https://www.jefmayer.com/" />
         </Head>
         <Layout>

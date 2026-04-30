@@ -1,11 +1,15 @@
+@use '../base/variables' as vars;
+@use '../base/breakpoints' as bp;
+@use '../base/functions' as fn;
+
 .project-animation-amplifyit {
   height: 45rem;
 
-  @include breakpoint(sm) {
+  @include bp.breakpoint(sm) {
     height: 75rem;
   }
 
-  @include breakpoint(md) {
+  @include bp.breakpoint(md) {
     height: 90rem;
   }
 
@@ -29,15 +33,15 @@
   }
 
   .video-grid-item {
-    background: $white;
+    background: vars.$white;
     height: 0;
-    margin: translate-width(1.5);
+    margin: fn.translate-width(1.5);
     overflow: hidden;
     padding-top: 17.999356356%;
     transform: scale(1.25);
     transform-origin: center;
     visibility: hidden;
-    width: translate-width(305);
+    width: fn.translate-width(305);
     will-change: transform;
 
     video,
@@ -57,7 +61,7 @@
     will-change: transform;
     z-index: 2;
 
-    @include breakpoint(lg) {
+    @include bp.breakpoint(lg) {
       margin-top: -15rem;
     }
   }
@@ -67,7 +71,7 @@
     margin: 0 auto;
     max-width: 38.9rem;
     position: relative;
-    width: translate-width(389);
+    width: fn.translate-width(389);
     z-index: 2;
   }
 
@@ -82,7 +86,7 @@
     img {
       margin: 0 auto;
       max-width: 38.9rem;
-      width: translate-width(389);
+      width: fn.translate-width(389);
     }
   }
 
@@ -99,7 +103,7 @@
     margin: 0 auto;
     max-width: 53.4rem;
     position: relative;
-    width: translate-width(534);
+    width: fn.translate-width(534);
     z-index: 2;
   }
 
@@ -111,7 +115,7 @@
     position: absolute;
     transform: translate(-50%);
     transform-origin: top;
-    width: translate-width(534);
+    width: fn.translate-width(534);
     will-change: transform;
     z-index: 1;
   }
@@ -133,12 +137,12 @@
       right: calc(-100% + 153 / 924 * 99%); /* stylelint-disable-line function-calc-no-unspaced-operator */
       width: 100%;
 
-      @include breakpoint(md) {
+      @include bp.breakpoint(md) {
         right: calc(-100% + 15.5rem);
       }
     }
 
-    @include breakpoint(lg) {
+    @include bp.breakpoint(lg) {
       margin-top: -36rem;
     }
   }
@@ -147,7 +151,7 @@
     height: auto;
     max-width: 15.3rem;
     position: relative;
-    width: translate-width(153);
+    width: fn.translate-width(153);
     will-change: transform;
     z-index: 2;
   }
@@ -160,7 +164,7 @@
     position: relative;
     transform: scale(1.25);
     transform-origin: center;
-    width: translate-width(123);
+    width: fn.translate-width(123);
     will-change: opacity, transform;
     z-index: 1;
   }

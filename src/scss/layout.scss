@@ -1,27 +1,20 @@
-@function translate-width($pixelValue) {
-  @return calc($pixelValue / 924) * 99%;
-}
-
-@function delayed-time($delay, $value) {
-  @return ($delay + $value) + s;
-}
-
-@import 'base/variables';
-@import 'base/accessibility';
-@import 'base/base';
-@import 'base/breakpoints';
-@import 'layout/page';
-@import 'modules/background-loader';
-@import 'modules/section-loader';
-@import 'modules/project';
-@import 'modules/amplifyit';
-@import 'modules/vitale';
-@import 'modules/intro';
-@import 'modules/samsung';
-@import 'modules/oovoo';
-@import 'modules/swfcorp';
-@import 'modules/trainspotted/trainspotted';
-@import 'modules/tumblr';
-@import 'utils/scrolling';
-@import 'footer';
-@import 'header';
+@use 'base/variables';
+@use 'base/accessibility';
+@use 'base/base';
+@use 'base/breakpoints';
+@use 'base/functions';
+@use 'layout/page';
+@use 'modules/background-loader';
+@use 'modules/section-loader';
+@use 'modules/project';
+@use 'modules/amplifyit';
+@use 'modules/vitale';
+@use 'modules/intro';
+@use 'modules/samsung';
+@use 'modules/oovoo';
+@use 'modules/swfcorp';
+@use 'modules/trainspotted';
+@use 'modules/tumblr';
+@use 'utils/scrolling';
+@use 'footer';
+@use 'header';

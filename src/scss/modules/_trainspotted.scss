@@ -1,0 +1,266 @@
+@use '../base/breakpoints' as bp;
+
+$trainspotted-san-serif-font: 'Muli', Helvetica, Arial, Roboto, sans-serif;
+$trainspotted-body-font: 'Muli', Helvetica, Arial, Roboto, sans-serif;
+$trainspotted-background-color: rgb(209, 209, 197);
+$trainspotted-background-color-light: rgb(229, 229, 217);
+$trainspotted-background-color-lighter: rgb(242, 242, 232);
+$trainspotted-highlight-color: rgb(233, 211, 125);
+$trainspotted-highlight-color-25: rgba(233, 211, 125, .25);
+$trainspotted-black: rgb(0, 0, 0);
+$trainspotted-black-50: rgba(0, 0, 0, .5);
+$trainspotted-dark: rgb(40, 40, 38);
+$trainspotted-dark-15: rgba(40, 40, 38, .15);
+$trainspotted-dark-25: rgba(40, 40, 38, .25);
+$trainspotted-dark-50: rgba(40, 40, 38, .5);
+$trainspotted-dark-75: rgba(40, 40, 38, .75);
+$trainspotted-white: rgb(255, 255, 255);
+$trainspotted-white-15: rgba(255, 255, 255, .15);
+$trainspotted-white-10: rgba(255, 255, 255, .1);
+$trainspotted-white-5: rgba(255, 255, 255, .05);
+$trainspotted-white-50: rgba(255, 255, 255, .5);
+$trainspotted-base-shadow: 0 .1rem .1rem 0 $trainspotted-dark-15;
+
+@mixin trainspotted-san-serif-regular {
+  font-family: $trainspotted-san-serif-font;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.data-table {
+
+  .table-title {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+    position: relative;
+    width: 100%;
+
+    h3 {
+      @include trainspotted-san-serif-regular;
+      font-size: .8rem;
+      letter-spacing: .05em;
+      padding: 0 .5rem;
+      position: relative;
+      text-transform: uppercase;
+    }
+
+    .title-spacing {
+      background: $trainspotted-dark;
+      height: .3rem;
+      width: auto;
+    }
+
+    .title-left-spacing {
+      width: .5rem;
+    }
+
+    .title-right-spacing {
+      width: calc(100% - 27.7rem);
+    }
+  }
+
+  .table-values-grid {
+    clear: both;
+  }
+
+  .y-axis {
+    clear: both;
+  }
+}
+
+.data-visualization {
+  width: 100%;
+
+  .data-table {
+    margin: 2rem 1rem;
+  }
+
+  .y-axis-header {
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+  }
+
+  .y-axis-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .5rem;
+    position: relative;
+    width: 100%;
+  }
+
+  .row-label {
+    text-align: right;
+    width: 10rem;
+  }
+
+  .row-axis {
+    border-bottom: .1rem dotted $trainspotted-dark-15;
+    margin-bottom: .5rem;
+    margin-left: 1rem;
+    width: 100%;
+  }
+
+  .x-axis {
+    margin-left: 11rem;
+    width: 100%;
+  }
+
+  .data-set-values {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+
+    li {
+      font-size: .8rem;
+    }
+  }
+}
+
+.resightings-values-table {
+  position: relative;
+
+  .y-axis-row {
+    cursor: default;
+    position: relative;
+
+    .row-label,
+    .row-axis {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .sighting-marker {
+    -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
+    -moz-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
+    border: 0;
+    border-radius: .4rem;
+    height: .8rem;
+    left: 0;
+    margin-left: -.4rem;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    top: .4rem;
+    width: .8rem;
+    z-index: 2;
+
+    &::after {
+      background: inherit;
+      border-radius: .8rem;
+      content: '';
+      height: 1.6rem;
+      left: calc(-50% - 1.2rem);
+      position: absolute;
+      top: -50%;
+      transform: scale(.15, .375);
+      transform-origin: center;
+      transition: transform .25s ease-in-out;
+      width: 4rem;
+      will-change: transform;
+    }
+
+    span {
+      @include trainspotted-san-serif-regular;
+      color: $trainspotted-white;
+      display: none;
+      left: calc(-50% - 1.2rem);
+      position: relative;
+      text-align: center;
+      top: -.1rem;
+      width: 4rem;
+      z-index: 1;
+    }
+
+    &.active::after {
+      transform: scale(1);
+    }
+
+    &.active {
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .sighting-connector {
+    height: .1rem;
+    margin-left: .4rem;
+    position: absolute;
+    top: .7rem;
+    transform-origin: left;
+    z-index: 1;
+  }
+
+  &.initial-state {
+
+    .sighting-marker {
+      left: 0 !important; /* stylelint-disable-line declaration-no-important */
+    }
+
+    .sighting-connector {
+      left: 0 !important; /* stylelint-disable-line declaration-no-important */
+      width: 0 !important; /* stylelint-disable-line declaration-no-important */
+    }
+  }
+}
+
+.y-axis {
+  max-height: 27rem;
+  overflow: auto;
+}
+
+.project-animation-trainspotted {
+  height: 55rem;
+
+  @include bp.breakpoint(xs) {
+    height: 57rem;
+  }
+
+  @include bp.breakpoint(sm) {
+    height: 60rem;
+  }
+
+  @include bp.breakpoint(lg) {
+    height: 66rem;
+  }
+
+  .fixed-bg {
+    background: rgb(201, 201, 185);
+    background: linear-gradient(0deg, rgba(201, 201, 185, 1) 0%, rgba(229, 229, 217, 1) 100%);
+  }
+
+  .data-visualization {
+    margin-top: 10%;
+  }
+
+  .visualization-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .visualization-overlay-inner {
+    margin: 0 auto;
+    max-width: 45rem;
+    width: 100%;
+  }
+}
+
+.project-details-trainspotted {
+  background: rgba(201, 201, 185, .75);
+  background: linear-gradient(0deg, rgba(201, 201, 185, .75) 0%, rgba(229, 229, 217, .75) 100%);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.trainspotted-logo {
+  background-image: url('/images/trainspotted/trainspotted-logo.svg');
+  height: 12rem;
+  width: 15rem;
+}

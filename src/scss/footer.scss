@@ -1,5 +1,8 @@
+@use 'base/variables' as vars;
+@use 'base/breakpoints' as bp;
+
 .footer {
-  background: $black;
+  background: vars.$black;
   position: relative;
   width: 100%;
   z-index: 2;
@@ -22,11 +25,11 @@
       text-align: center;
       width: 100%;
 
-      @include breakpoint(sm) {
+      @include bp.breakpoint(sm) {
         width: calc(50% - .75rem);
       }
 
-      @include breakpoint(md) {
+      @include bp.breakpoint(md) {
         width: calc(33.333% - 1rem);
       }
     }
@@ -34,7 +37,7 @@
     .footer-content-skills {
       margin-top: 3rem;
 
-      @include breakpoint(sm) {
+      @include bp.breakpoint(sm) {
         margin-top: 0;
       }
     }
@@ -45,7 +48,7 @@
         margin: 0 auto;
         max-width: 25rem;
 
-        @include breakpoint(md) {
+        @include bp.breakpoint(md) {
           margin: 0;
           max-width: 100%;
         }
@@ -55,12 +58,12 @@
     .footer-content-locations {
       margin-top: 3rem;
 
-      @include breakpoint(sm) {
+      @include bp.breakpoint(sm) {
         margin-top: 5rem;
         width: 100%;
       }
 
-      @include breakpoint(md) {
+      @include bp.breakpoint(md) {
         margin-top: 0;
         width: calc(33.333% - 3rem);
       }
@@ -72,7 +75,7 @@
   }
 
   .heading-sm {
-    color: $primary-color;
+    color: vars.$primary-color;
   }
 
   .flag-wrapper {
@@ -84,11 +87,11 @@
     margin-top: 1rem;
     max-width: 30rem;
 
-    @include breakpoint(sm) {
+    @include bp.breakpoint(sm) {
       max-width: 50rem;
     }
 
-    @include breakpoint(md) {
+    @include bp.breakpoint(md) {
       max-width: 100%;
     }
 
@@ -100,22 +103,22 @@
         height: auto;
         width: 100%;
 
-        @include breakpoint(sm) {
+        @include bp.breakpoint(sm) {
           height: 100%;
           width: auto;
         }
 
-        @include breakpoint(md) {
+        @include bp.breakpoint(md) {
           height: auto;
           width: 100%;
         }
       }
 
-      @include breakpoint(sm) {
+      @include bp.breakpoint(sm) {
         transform: rotate(-90deg);
       }
 
-      @include breakpoint(md) {
+      @include bp.breakpoint(md) {
         transform: rotate(0);
       }
 
@@ -139,12 +142,12 @@
       max-width: 7.5rem;
       width: calc(36.6% - 1.5rem);
 
-      @include breakpoint(sm) {
+      @include bp.breakpoint(sm) {
         max-width: 100%;
         width: auto;
       }
 
-      @include breakpoint(md) {
+      @include bp.breakpoint(md) {
         max-width: 7.5rem;
         width: calc(36.6% - 1.5rem);
       }
@@ -155,12 +158,12 @@
       max-width: 6.5rem;
       width: calc(31.7% - 1.5rem);
 
-      @include breakpoint(sm) {
+      @include bp.breakpoint(sm) {
         max-width: 100%;
         width: auto;
       }
 
-      @include breakpoint(md) {
+      @include bp.breakpoint(md) {
         max-width: 6.5rem;
         width: calc(31.7% - 1.5rem);
       }
@@ -170,7 +173,7 @@
       position: relative;
 
       &::after {
-        background-color: $primary-color;
+        background-color: vars.$primary-color;
         bottom: 0;
         content: '';
         height: .3rem;
@@ -178,7 +181,7 @@
         position: absolute;
         width: 100%;
 
-        @include breakpoint(sm) {
+        @include bp.breakpoint(sm) {
           bottom: auto;
           height: 100%;
           left: -1.5rem;
@@ -186,7 +189,7 @@
           width: .3rem;
         }
 
-        @include breakpoint(md) {
+        @include bp.breakpoint(md) {
           bottom: 0;
           height: .3rem;
           left: 0;
@@ -224,7 +227,7 @@
         width: 100%;
 
         &::before {
-          background-color: $primary-color;
+          background-color: vars.$primary-color;
           bottom: 0;
           content: '';
           height: .3rem;
@@ -255,7 +258,7 @@
     width: 33%;
 
     span {
-      color: $primary-color;
+      color: vars.$primary-color;
       font-size: 2.4rem;
       font-weight: bold;
       left: 0;

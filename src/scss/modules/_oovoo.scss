@@ -1,7 +1,10 @@
+@use '../base/variables' as vars;
+@use '../base/breakpoints' as bp;
+
 .project-animation-oovoo {
   height: 55rem;
 
-  @include breakpoint(md) {
+  @include bp.breakpoint(md) {
     height: 70rem;
   }
 
@@ -15,7 +18,7 @@
     display: flex;
     margin-top: 15%;
 
-    @include breakpoint(md) {
+    @include bp.breakpoint(md) {
       margin-top: 7%;
     }
   }
@@ -131,7 +134,7 @@
     visibility: hidden;
     width: 100%;
 
-    @include breakpoint(md) {
+    @include bp.breakpoint(md) {
       display: block;
     }
 

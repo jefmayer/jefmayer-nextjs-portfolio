@@ -1,11 +1,14 @@
+@use '../base/variables' as vars;
+@use '../base/breakpoints' as bp;
+
 .project-animation-vitale {
   height: 50rem;
 
-  @include breakpoint(sm) {
+  @include bp.breakpoint(sm) {
     height: 78rem;
   }
 
-  @include breakpoint(md) {
+  @include bp.breakpoint(md) {
     height: 80rem;
   }
 
@@ -29,7 +32,7 @@
     position: relative;
     will-change: transform;
 
-    @include breakpoint(md) {
+    @include bp.breakpoint(md) {
       margin-top: 8%;
     }
   }
@@ -95,12 +98,12 @@
     position: relative;
     will-change: transform;
 
-    @include breakpoint(sm) {
+    @include bp.breakpoint(sm) {
       display: block;
       margin-top: 19%;
     }
 
-    @include breakpoint(md) {
+    @include bp.breakpoint(md) {
       margin-top: 10.5%;
     }
   }
