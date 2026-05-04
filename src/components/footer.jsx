@@ -18,19 +18,19 @@ function Footer({ currentYear }) {
               <br />
               NextJs, Modern Web Frameworks
               <br />
-              .NET Web Dev, Platform-Based Solutions
+              .NET Dev, Platform-Based Solutions
               <br />
               PHP, Wordpress Development
               <br />
-              Responsive Site Design & UX
+              UX & Creative Design
+              <br />
+              SEO, GEO, & Martech Integration
+              <br />
+              GenAI as a Coding Buddy
               <br />
               Brand & Content Strategy
               <br />
-              SEO & Martech Integration
-              <br />
               Thought Leadership & Technical Writing
-              <br />
-              Creative Design
             </p>
           </div>
           <div className="footer-content-locations">

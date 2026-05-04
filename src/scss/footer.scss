@@ -65,7 +65,7 @@
 
       @include bp.breakpoint(md) {
         margin-top: 0;
-        width: calc(33.333% - 3rem);
+        width: calc(33.333% - 1rem);
       }
     }
   }
