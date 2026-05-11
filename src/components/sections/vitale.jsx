@@ -54,6 +54,12 @@ class Vitale extends Component {
 
     new ScrollMagic.Scene({
       triggerElement,
+      duration: 1300,
+    }).setClassToggle('body', 'project-vitale')
+      .addTo(controller);
+
+    new ScrollMagic.Scene({
+      triggerElement,
       duration: 400,
       triggerHook: 0,
     }).setPin(`${triggerElement} .section-content`)

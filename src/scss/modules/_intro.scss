@@ -30,19 +30,19 @@
     max-width: 54rem;
     position: relative;
     top: 0;
-    transform: scale(.75);
+    // transform: scale(.75);
     transform-origin: center;
     transition: transform .35s ease-in-out;
     width: 100%;
     will-change: transform;
 
-    @include bp.breakpoint(sm) {
+    /* @include bp.breakpoint(sm) {
       transform: scale(.9);
     }
 
     @include bp.breakpoint(md) {
       transform: scale(1);
-    }
+    } */
   }
 
   .intro-borders {
@@ -137,7 +137,7 @@
 
   .intro-statement {
     color: vars.$white;
-    font-size: 2rem;
+    // font-size: 2rem;
     font-weight: normal;
     line-height: 1.5;
     margin-top: .6rem;

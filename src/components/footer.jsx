@@ -5,7 +5,8 @@ function Footer({ currentYear }) {
   return (
     <footer className="footer project-animation-about project-details-about">
       <div className="footer-inner">
-        <h2 className="heading-lg">About</h2>
+        <h2 className="heading-lg">Let&rsquo;s Work Together</h2>
+        <p className="body-lg">I have a wide-ranging skillset built over 25+ years in various design, development, and sometimes more compoundedly-amorphous tech industry roles. These positions have lead to great stuff being created. If you need help creating great stuff, let&rsquo;s make it happen. </p>
         <div className="footer-content">
           <div className="footer-content-clients">
             <h3 className="heading-sm">Who I&rsquo;ve worked with</h3>
@@ -16,17 +17,15 @@ function Footer({ currentYear }) {
             <p className="body-regular">
               Fullstack Javascript Development
               <br />
-              NextJs, Modern Web Frameworks
-              <br />
               .NET Dev, Platform-Based Solutions
               <br />
               PHP, Wordpress Development
               <br />
+              GenAI Coding Assistants
+              <br />
               UX & Creative Design
               <br />
               SEO, GEO, & Martech Integration
-              <br />
-              GenAI as a Coding Buddy
               <br />
               Brand & Content Strategy
               <br />

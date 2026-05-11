@@ -2,6 +2,7 @@ import AmplifyIt from './amplifyit';
 import Vitale from './vitale';
 import Oovoo from './oovoo';
 import Samsung from './samsung';
+import Sunsetter from './sunsetter';
 import Trainspotted from './trainspotted';
 import Tumblr from './tumblr';
 
@@ -14,6 +15,10 @@ const getSectionComponentMap = () => (
     {
       id: 'samsung',
       SectionComponent: Samsung,
+    },
+    {
+      id: 'sunsetter',
+      SectionComponent: Sunsetter,
     },
     {
       id: 'vitale',

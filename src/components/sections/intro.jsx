@@ -142,7 +142,7 @@ class Intro extends Component {
                   <div className="jef-logo" />
                   <h1 className="intro-statement">
                     <span className="highlight">👋&nbsp;I create innovative solutions elevated by great design. </span>
-                    I work across multi-disciplined teams to develop engaging interactive experiences.
+                    I work across multi-disciplined teams to develop engaging experiences.
                   </h1>
                   <div className="scroll-indicator-animation-wrapper">
                     <button

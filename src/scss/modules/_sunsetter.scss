@@ -1,0 +1,153 @@
+@use '../base/variables' as vars;
+@use '../base/breakpoints' as bp;
+
+.project-animation-sunsetter {
+  height: 50rem;
+
+  @include bp.breakpoint(sm) {
+    height: 78rem;
+  }
+
+  @include bp.breakpoint(md) {
+    height: 80rem;
+  }
+
+  .fixed-bg {
+    background: rgb(255, 221, 102);
+    background: linear-gradient(0deg, rgba(255, 198, 0, 1) 0%, rgba(255, 221, 102, 1) 100%);
+  }
+
+  .browser-wrapper {
+    perspective: 140rem;
+  }
+
+  .browser {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: center;
+    transform: translateX(15%) rotateY(-25deg) rotateX(15deg) rotateZ(-4deg);
+    transform-origin: center;
+    width: 100%;
+  }
+
+  .browser-frame {
+    aspect-ratio: 7 / 5;
+    background-color: rgba(255, 255, 255, .25);
+    border-radius: .8rem;
+    height: auto;
+    margin-top: 22%;
+    max-width: 65rem;
+    overflow: hidden;
+    position: relative;
+    transform-origin: center;
+    width: 100%;
+
+    @include bp.breakpoint(md) {
+      margin-top: 8%;
+    }
+  }
+
+  .browser-ui-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    left: .8rem;
+    position: absolute;
+    top: .8rem;
+    width: calc(100% - 1.6rem);
+  }
+
+  .browser-ui-btn {
+    background-color: vars.$white;
+    border-radius: .6rem;
+    height: 1.2rem;
+    margin-right: .6rem;
+    width: 1.2rem;
+  }
+
+  .browser-ui-addressbar {
+    border: 2px solid vars.$white;
+    border-radius: 1rem;
+    height: 1.8rem;
+    width: calc(100% - 5.4rem);
+  }
+
+  .browser-tabs-wrapper {
+    height: calc(100% - 4.6rem);
+    left: .8rem;
+    position: absolute;
+    top: 3.8rem;
+    width: calc(100% - 1.6rem);
+  }
+
+  .browser-tab {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .tab-element {
+    background-color: vars.$white;
+    border-top-left-radius:.6rem;
+    border-top-right-radius:.6rem;
+    height: 2.4rem; // <-------------------------------------
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 12rem; // <-------------------------------------
+  }
+
+  .browser-tab-2 .tab-element {
+    left: 12.2rem; // <-------------------------------------
+    transform-origin: bottom left;
+  }
+
+  .browser-tab-3 .tab-element {
+    left: 24.4rem; // <-------------------------------------
+    transform-origin: bottom left;
+  }
+
+  .browser-add-tab .tab-element {
+    left: 12.2rem; // <-------------------------------------
+    width: 2.4rem; // <-------------------------------------
+
+    .add-tab-icon-line {
+      background-color: rgb(255, 232, 153);
+      height: .2rem; // <-------------------------------------
+      left: calc(50% - .5rem); // <-------------------------------------
+      position: absolute;
+      top: calc(50% - .1rem); // <-------------------------------------
+      width: 1rem; // <-------------------------------------
+
+      &:nth-child(2) {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .tab-content {
+    background-color: vars.$white;
+    height: calc(100% - 2.4rem); // <-------------------------------------
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 2.4rem; // <-------------------------------------
+    width: 100%;
+  }
+}
+
+.project-details-sunsetter {
+  background: rgba(255, 221, 102, .75);
+  background: linear-gradient(0deg, rgba(255, 198, 0, .75) 0%, rgba(255, 221, 102, .75) 100%);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.sunsetter-logo {
+  background-image: url('/images/sunsetter/sunsetter-logo.svg');
+  height: 4.3rem;
+  width: 15.1rem;
+}

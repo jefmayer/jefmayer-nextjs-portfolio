@@ -9,7 +9,9 @@
 
   .footer-inner {
     margin: 0 auto;
+    max-width: 96rem;
     padding: 4rem 0;
+    width: calc(100% - 4rem);
   }
 
   .footer-content {
@@ -18,8 +20,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 96rem;
-    width: calc(100% - 4rem);
+    width: 100%;
 
     > div {
       text-align: center;
@@ -70,8 +71,18 @@
     }
   }
 
-  .heading-lg {
+  .heading-lg,
+  .body-lg {
     text-align: center;
+  }
+
+  .heading-lg {
+    // color: vars.$primary-color;
+    margin-bottom: 1rem;
+  }
+
+  .body-lg {
+    margin-bottom: 5rem;
   }
 
   .heading-sm {
