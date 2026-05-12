@@ -5,8 +5,7 @@ function Footer({ currentYear }) {
   return (
     <footer className="footer project-animation-about project-details-about">
       <div className="footer-inner">
-        <h2 className="heading-lg">Let&rsquo;s Work Together</h2>
-        <p className="body-lg">I have a wide-ranging skillset built over 25+ years in various design, development, and sometimes more compoundedly-amorphous tech industry roles. These positions have lead to great stuff being created. If you need help creating great stuff, let&rsquo;s make it happen. </p>
+        <p className="body-lg">I have a wide-ranging skillset built over two decades in various design, development, and other compoundedly-amorphous tech industry roles. At these positions, I was able to create great stuff. If you need help creating great stuff, <a className="highlight" href="https://www.linkedin.com/in/jefmayer/" target="_blank" rel="noopener noreferrer">let&rsquo;s make it happen.</a></p>
         <div className="footer-content">
           <div className="footer-content-clients">
             <h3 className="heading-sm">Who I&rsquo;ve worked with</h3>
@@ -21,7 +20,7 @@ function Footer({ currentYear }) {
               <br />
               PHP, Wordpress Development
               <br />
-              GenAI Coding Assistants
+              GenAI-Assisted Coding
               <br />
               UX & Creative Design
               <br />
@@ -83,10 +82,10 @@ function Footer({ currentYear }) {
             </div>
           </div>
         </div>
+        <div className="social-nav-heading">
+          <h3 className="heading-sm">Where you can find me</h3>
+        </div>
         <ul className="social-nav">
-          <li className="copyright-content">
-            <span>&copy;{currentYear.toString().substring(2)}</span>
-          </li>
           <li>
             <a
               className="linkedin-link"
@@ -153,6 +152,9 @@ function Footer({ currentYear }) {
             </a>
           </li>
         </ul>
+        <div className="copyright-content">
+          <span>&copy;{currentYear.toString().substring(2)}</span>
+        </div>
       </div>
     </footer>
   );

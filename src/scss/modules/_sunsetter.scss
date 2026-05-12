@@ -9,7 +9,7 @@
   }
 
   @include bp.breakpoint(md) {
-    height: 80rem;
+    height: 85rem;
   }
 
   .fixed-bg {
@@ -93,48 +93,48 @@
     background-color: vars.$white;
     border-top-left-radius:.6rem;
     border-top-right-radius:.6rem;
-    height: 2.4rem; // <-------------------------------------
+    height: calc(100% / 18);
     left: 0;
     position: absolute;
     top: 0;
-    width: 12rem; // <-------------------------------------
+    transform-origin: bottom left;
+    width: calc(100% / 6);
   }
 
   .browser-tab-2 .tab-element {
-    left: 12.2rem; // <-------------------------------------
-    transform-origin: bottom left;
+    translate: calc(100% + 2px) !important;
   }
 
   .browser-tab-3 .tab-element {
-    left: 24.4rem; // <-------------------------------------
-    transform-origin: bottom left;
+    translate: calc(200% + 4px) !important;
   }
 
   .browser-add-tab .tab-element {
-    left: 12.2rem; // <-------------------------------------
-    width: 2.4rem; // <-------------------------------------
+    translate: calc(400% + 2px);
+    width: calc(100% / 24);
 
     .add-tab-icon-line {
       background-color: rgb(255, 232, 153);
-      height: .2rem; // <-------------------------------------
-      left: calc(50% - .5rem); // <-------------------------------------
+      height: .2rem;
+      left: 50%;
       position: absolute;
-      top: calc(50% - .1rem); // <-------------------------------------
-      width: 1rem; // <-------------------------------------
+      top: calc(50% - .2rem);
+      transform: translate(-50%, 50%);
+      width: 40%;
 
       &:nth-child(2) {
-        transform: rotate(90deg);
+        transform: translate(-50%, 50%) rotate(90deg);
       }
     }
   }
 
   .tab-content {
     background-color: vars.$white;
-    height: calc(100% - 2.4rem); // <-------------------------------------
+    height: calc(100% - (100% / 18));
     left: 0;
     overflow: hidden;
     position: absolute;
-    top: 2.4rem; // <-------------------------------------
+    top: calc((100% / 18) - 1px);
     width: 100%;
   }
 }

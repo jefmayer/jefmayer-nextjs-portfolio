@@ -296,12 +296,12 @@
       "client": "Vitale",
       "id": "vitale",
       "invertText": false,
-      "overview": "Vitale was a new brand aimed at price-conscious shoppers in the market for blinds and shades. At launch, the brand site needed to build awareness and generate dealer leads, and include ecommerce capabilities that would eventually come online in a later release.",
+      "overview": "Vitale was a new brand aimed at price-conscious shoppers in the market for blinds and shades. At launch, the brand site needed to build awareness and generate dealer leads, and include hooks for ecommerce capabilities that would come online in a later release.",
       "projectLink": "https://www.vitaleblinds.com/",
       "projectTitlePart1": "",
       "projectTitlePart2": "Consumer Website & Dealer Portal",
       "role": "Creative Director, JavaScript Developer",
-      "solution": "Vitale was built in Optimizely Commerce. A custom integration synced the product catalog from the client’s PIM and powered product style pages and the swatch-ordering cart. Product configuration and checkout were framed-out for future DTC functionality."
+      "solution": "Vitale was built in Optimizely Commerce. A custom integration synced the product catalog from the client’s PIM and powered product style pages and swatch ordering. Product configuration and checkout were framed-out for future DTC functionality."
     },
     {
       "assets": [

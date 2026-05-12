@@ -42,7 +42,7 @@ class Vitale extends Component {
         .fromTo(`${triggerElement} .tablet-wrapper`, 1, { y: '40%' }, { y: '0%' }, 0)
         .fromTo(`${triggerElement} .tablet-shadow`, 1, { opacity: 0, scale: 0.5 }, { opacity: 0.5, scale: 1 }, 0.25),
       screenContent: new TimelineLite()
-        .fromTo(`${triggerElement} .laptop-wrapper .screen-content`, 1.5, { y: '0%' }, { y: '-70%' })
+        .fromTo(`${triggerElement} .laptop-wrapper .screen-content`, 1.5, { y: '0%' }, { y: '-50%' })
         .fromTo(`${triggerElement} .tablet-wrapper .screen-content`, 2, { y: '0%' }, { y: '-70%' }, 0),
     };
 
