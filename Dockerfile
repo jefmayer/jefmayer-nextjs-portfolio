@@ -2,6 +2,10 @@ FROM node:22.19.0 AS builder
 RUN apt-get update && apt-get install -y curl git && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 
+ARG NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+
+ENV NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=$NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+
 COPY package*.json ./
 RUN npm install --legacy-peer-deps
 
