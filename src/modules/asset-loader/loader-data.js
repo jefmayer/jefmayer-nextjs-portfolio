@@ -1,5 +1,5 @@
 import LoaderAsset from './loader-asset';
-import getSectionComponentMap from '../../components/sections/section-manifest';
+import getSectionComponentMap from '@components/sections/section-manifest';
 
 let siteData = [];
 

@@ -6,12 +6,12 @@ import {
   getSceneOffsetPos,
   getScrollObserver,
   scrollToPosition,
-} from '../../utils/browser-scroll';
-import { getScrollMagicController } from '../../utils/scroll-magic';
+} from '@utils/browser-scroll';
+import { getScrollMagicController } from '@utils/scroll-magic';
 import {
   hideMenu,
   setActiveSection,
-} from '../../actions';
+} from '@actions';
 import getSectionComponentMap from './section-manifest';
 
 class Intro extends Component {

@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // import ScrollMagic from 'scrollmagic';
 import { TimelineLite } from 'gsap';
-import { getImageDataById } from '../../utils/section-utils';
-import { getScrollMagicController } from '../../utils/scroll-magic';
-import { getScrollObserver } from '../../utils/browser-scroll';
+import { getImageDataById } from '@utils/section-utils';
+import { getScrollMagicController } from '@utils/scroll-magic';
+import { getScrollObserver } from '@utils/browser-scroll';
 import ProjectDetails from './project-details';
 import SiteImage from '../site-image';
 

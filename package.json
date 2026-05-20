@@ -1,7 +1,7 @@
 {
   "name": "jefmayer-nextjs-portfolio",
   "description": "Single page scrolling portfolio built using NextJs",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "author": "Jef Mayer",
   "private": false,
   "scripts": {
@@ -13,6 +13,7 @@
   "dependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@reduxjs/toolkit": "^2.8.2",
+    "@vis.gl/react-google-maps": "^1.7.1",
     "autoprefixer": "^10.4.13",
     "eslint": "8.33.0",
     "eslint-config-airbnb": "^19.0.4",

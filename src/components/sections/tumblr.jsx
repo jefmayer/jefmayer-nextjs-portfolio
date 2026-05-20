@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // import ScrollMagic from 'scrollmagic';
 import { TimelineLite } from 'gsap';
-import { commaFormattedNumber } from '../../utils/formatting-utils';
-import { getCollectionWeight } from '../../api/discogs';
-import { getImageDataById } from '../../utils/section-utils';
+import { commaFormattedNumber } from '@utils/formatting-utils';
+import { getCollectionWeight } from '@api/discogs';
+import { getImageDataById } from '@utils/section-utils';
 import {
   getInterval,
   getTimeBetweenDates,
-} from '../../utils/date-utils';
-import { getScrollMagicController } from '../../utils/scroll-magic';
-import { getScrollObserver } from '../../utils/browser-scroll';
-import { getTeamWinTotalSinceYear } from '../../api/mlb';
+} from '@utils/date-utils';
+import { getScrollMagicController } from '@utils/scroll-magic';
+import { getScrollObserver } from '@utils/browser-scroll';
+import { getTeamWinTotalSinceYear } from '@api/mlb';
 import ProjectDetails from './project-details';
 import SiteImage from '../site-image';
 
@@ -103,7 +103,7 @@ class Tumblr extends Component {
     new ScrollMagic.Scene({
       triggerElement,
       duration: 3000,
-    }).setClassToggle('body', 'project-tumblr')
+    }).setClassToggle('body',`project-${id}`)
       .addTo(controller);
 
     new ScrollMagic.Scene({

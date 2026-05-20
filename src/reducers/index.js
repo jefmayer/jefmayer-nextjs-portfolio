@@ -10,7 +10,7 @@ import {
   HIDE_MENU,
   SET_ACTIVE_SECTION,
   SHOW_MENU,
-} from '../actions';
+} from '@actions';
 
 const siteData = (state = {
   items: [],

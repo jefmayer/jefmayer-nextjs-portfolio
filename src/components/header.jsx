@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 import {
   getSceneOffsetPos,
   scrollToPosition,
-} from '../utils/browser-scroll';
+} from '@utils/browser-scroll';
 import getSectionComponentMap from './sections/section-manifest';
 import {
   hideMenu,
   setActiveSection,
   showMenu,
-} from '../actions';
+} from '@actions';
 
 class Header extends Component {
   constructor(props) {

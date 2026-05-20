@@ -6,13 +6,13 @@ import {
   setAssetLoadPercentage,
   setAssetPreloadComplete,
   setAssetPreloadPercentage,
-} from '../actions';
+} from '@actions';
 import {
   getMainAssetData,
   getPreloadAssetData,
   initLoaderData,
-} from '../modules/asset-loader/loader-data';
-import { imageWorker, loadAssetSets } from '../modules/asset-loader/concurrent-asset-loader';
+} from '@modules/asset-loader/loader-data';
+import { imageWorker, loadAssetSets } from '@modules/asset-loader/concurrent-asset-loader';
 
 
 class Loader extends Component {

@@ -1,5 +1,5 @@
-import breakpoints from '../../utils/breakpoints';
-import { getBrowserWindowDims } from '../../utils/browser-utils';
+import breakpoints from '@utils/breakpoints';
+import { getBrowserWindowDims } from '@utils/browser-utils';
 
 export default class LoaderAsset {
   constructor(options) {

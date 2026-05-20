@@ -6,20 +6,20 @@ import { connect } from 'react-redux';
 import {
   fetchSiteData,
   setActiveSection,
-} from '../actions';
+} from '@actions';
 import {
   getSectionById,
   getSectionIdFromClassNames,
-} from '../utils/section-utils';
-import getSectionComponentMap from '../components/sections/section-manifest';
-import { initScrollObserver } from '../utils/browser-scroll';
-import { initScrollMagicController } from '../utils/scroll-magic';
-import { isBrowser } from '../utils/browser-utils';
-import Footer from '../components/footer';
-import Header from '../components/header';
-import Intro from '../components/sections/intro';
-import Loader from '../components/loader';
-import Layout from '../components/layout';
+} from '@utils/section-utils';
+import getSectionComponentMap from '@components/sections/section-manifest';
+import { initScrollObserver } from '@utils/browser-scroll';
+import { initScrollMagicController } from '@utils/scroll-magic';
+import { isBrowser } from '@utils/browser-utils';
+import Footer from '@components/footer';
+import Header from '@components/header';
+import Intro from '@components/sections/intro';
+import Loader from '@components/loader';
+import Layout from '@components/layout';
 
 class IndexPage extends Component {
   constructor(props) {

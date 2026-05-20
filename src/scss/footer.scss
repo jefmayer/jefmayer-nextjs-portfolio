@@ -5,7 +5,7 @@
   background: vars.$black;
   position: relative;
   width: 100%;
-  z-index: 2;
+  z-index: 4; // 2;
 
   .footer-inner {
     margin: 0 auto;

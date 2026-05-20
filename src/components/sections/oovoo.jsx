@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // import ScrollMagic from 'scrollmagic';
 import { TimelineLite } from 'gsap';
-import { getImageDataById } from '../../utils/section-utils';
-import { getScrollMagicController } from '../../utils/scroll-magic';
-import { getScrollObserver } from '../../utils/browser-scroll';
-import { isBrowser } from '../../utils/browser-utils';
+import { getImageDataById } from '@utils/section-utils';
+import { getScrollMagicController } from '@utils/scroll-magic';
+import { getScrollObserver } from '@utils/browser-scroll';
+import { isBrowser } from '@utils/browser-utils';
 import ProjectDetails from './project-details';
 import SiteImage from '../site-image';
 
@@ -24,6 +24,7 @@ class Oovoo extends Component {
     const el = this.animationRef.current;
     observer.observe(el);
     const adjustTabletHeight = () => {
+      if (!this.tabletWrapperRef) return;
       this.tabletWrapperRef.current.style.height = `${this.tabletWrapperRef.current.offsetWidth * 0.7494}px`;
     };
     if (isBrowser()) {

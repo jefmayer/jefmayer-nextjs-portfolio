@@ -243,6 +243,18 @@
       "solution": "Working with a project team split between Chicago and Austin, I developed software to drive the graphics-intense interface, stream videos, and easily facilitate the NFC transfer between the kiosk and users’ phones."
     },
     {
+      "assets": [],
+      "client": "BRT",
+      "id": "brtpointsapp",
+      "invertText": false,
+      "overview": "A cycling teammate ran an informal annual competition to see which team members had the best times across 20 Strava segments around Tucson. Scorekeeping consisted of copying data from Strava into a spreadsheet using formulas to assign the latest rankings. A better way seemed possible, if not necessary.",
+      "projectLink": "https://brt-strava.jefmayer.com/home/",
+      "projectTitlePart1": "",
+      "projectTitlePart2": "Bicycle Ranch Points Contest",
+      "role": "JavaScript Developer",
+      "solution": "I built a Next.js site and admin that integrated the Strava API. Team members connected their accounts and the site pulled segment data and automated scoring. Strava subsequently added restrictions to how third-parties can use and display data from their API, which effectively killed further development of this project."
+    },
+    {
       "assets": [
         {
           "alt": "",
