@@ -3,7 +3,6 @@ RUN apt-get update && apt-get install -y curl git && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 
 ARG NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
-
 ENV NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=$NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
 
 COPY package*.json ./
@@ -22,7 +21,6 @@ RUN npm install
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/src ./src
-COPY --from=builder /app/.eslintrc.json ./.eslintrc.json
 COPY --from=builder /app/jsconfig.json ./jsconfig.json
 COPY --from=builder /app/next.config.js ./next.config.js
 COPY --from=builder /app/package.json ./package.json

@@ -312,7 +312,7 @@
       "projectLink": "https://www.vitaleblinds.com/",
       "projectTitlePart1": "",
       "projectTitlePart2": "Consumer Website & Dealer Portal",
-      "role": "Creative Director, JavaScript Developer",
+      "role": "Creative Director, Technical Director, JavaScript Developer",
       "solution": "Vitale was built in Optimizely Commerce. A custom integration synced the product catalog from the client’s PIM and powered product style pages and swatch ordering. Product configuration and checkout were framed-out for future DTC functionality."
     },
     {
@@ -534,6 +534,18 @@
       "projectTitlePart2": "Portfolio",
       "role": "JavaScript Developer",
       "solution": "I hacked together a website in Tumblr and pointed it to my new domain. Each Tumblr post was centered around an illustrated personal metric, using webservices (MLB, Discogs) and various counters to calculate the totals."
+    },
+    {
+      "assets": [],
+      "client": "Pet Health Tracker",
+      "id": "pethealthtracker",
+      "invertText": true,
+      "overview": "My first greyhound, Penny, received what would turn out to be a terminal cancer diagnosis, although at the time, the vet optimistically believed treatment was possible. The changing medication dosages, their side-effects, her appetite—there was no more normal, and I needed a way to keep track of everything. ",
+      "projectLink": "https://penny-health.jefmayer.com/",
+      "projectTitlePart1": "Pet Health Tracker",
+      "projectTitlePart2": "Vue App",
+      "role": "Developer",
+      "solution": "What started as a Google Doc, quickly became overwhelming. I quickly built a web app with an integrated CMS using Vue.js and D3.js connected to MongoDB. The visualization and ease of data entry helped identify trends and ultimately confirmed the worst as the disease outpaced the treatments."
     }
   ]
 }

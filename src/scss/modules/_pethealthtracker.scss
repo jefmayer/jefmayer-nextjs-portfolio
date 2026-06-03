@@ -1,0 +1,124 @@
+@use '../base/variables' as vars;
+@use '../base/breakpoints' as bp;
+
+$black-75: rgba(42,42,39,0.75);
+$cyan: rgb(35,232,216);
+$fuscia: rgb(252,21,123);
+$orange: rgb(253,139,38);
+$plum: rgb(179,38,229);
+$violet: rgb(126,90,251);
+
+.project-animation-pethealthtracker {
+  height: 50rem;
+
+  @include bp.breakpoint(sm) {
+    height: 78rem;
+  }
+
+  @include bp.breakpoint(md) {
+    height: 80rem;
+  }
+
+  .fixed-bg {
+    background: rgb(31, 35, 48);
+  }
+}
+
+.progress-chart-wrapper {
+	margin-top: 8rem;
+}
+
+.progress-chart {
+	width: 100%;
+	height: 40rem;
+}
+
+.o-line {
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+.o-line--mobility {
+  stroke: $violet;
+}
+
+.o-line--activity {
+  stroke: $plum;
+}
+
+.o-line--appetite {
+  stroke: $cyan;
+}
+
+.o-line--pain {
+  stroke: $fuscia;
+}
+
+.o-line--stress {
+  stroke: $orange;
+}
+
+.o-axis--x {
+
+	text {
+		font-family: vars.$body-font;
+		font-weight: 500;
+		font-size: 10px;
+		fill: vars.$mid-gray;
+	}
+	
+	path {
+		stroke: vars.$white;
+		shape-rendering: crispEdges;
+	}
+	
+	line {
+		stroke: vars.$white;
+		shape-rendering: crispEdges;
+	}
+	
+	.domain {
+		stroke: none;
+		fill: none;
+	}
+	
+	.tick {
+		stroke: vars.$white;
+		stroke-opacity: 0.15;
+	}
+}
+
+.o-axis--y {
+
+	text {
+		font-family: vars.$body-font;
+		font-weight: 500;
+		font-size: 10px;
+		fill: vars.$mid-gray;
+	}
+	
+	path {
+		stroke: none;
+	}
+	
+	line {
+		stroke: none;
+	}
+	
+	.domain {
+		stroke: none;
+		fill: none;
+	}
+}
+
+.project-details-pethealthtracker {
+  background: rgba(31, 35, 48, .85);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.pethealthtracker-logo {
+  background-image: url('/images/pethealthtracker/logo.svg');
+  height: 10.4rem;
+  width: 15rem;
+}

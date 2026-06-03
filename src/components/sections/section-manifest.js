@@ -1,11 +1,13 @@
 import AmplifyIt from './amplifyit';
-import Vitale from './vitale';
-import Oovoo from './oovoo';
-import Samsung from './samsung';
 import BrtPointsApp from './brtpointsapp';
+import Oovoo from './oovoo';
+import PetHealthTracker from './pethealthtracker';
+import Samsung from './samsung';
 import Sunsetter from './sunsetter';
 import Trainspotted from './trainspotted';
 import Tumblr from './tumblr';
+import Vitale from './vitale';
+
 
 const getSectionComponentMap = () => (
   [
@@ -24,6 +26,10 @@ const getSectionComponentMap = () => (
     {
       id: 'sunsetter',
       SectionComponent: Sunsetter,
+    },
+    {
+      id: 'pethealthtracker',
+      SectionComponent: PetHealthTracker,
     },
     {
       id: 'vitale',

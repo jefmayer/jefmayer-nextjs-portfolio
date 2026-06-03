@@ -5,14 +5,15 @@ import PropTypes from 'prop-types';
 import { TimelineLite } from 'gsap';
 import { getScrollMagicController } from '@utils/scroll-magic';
 import { getScrollObserver } from '@utils/browser-scroll';
-import GoogleMap from '@modules/map';
+import Chart from '@modules/chart';
 import ProjectDetails from './project-details';
 
-class BrtPointsApp extends Component {
+class PetHealthTracker extends Component {
   constructor(props) {
     super(props);
     this.animate = this.animate.bind(this);
     this.animationRef = React.createRef();
+    this.chartRef = React.createRef();
     this.initAnimate = false;
     this.ScrollMagic = null;
   }
@@ -28,16 +29,15 @@ class BrtPointsApp extends Component {
     })();
   }
 
-
   addTweens() {
     const { data } = this.props;
     const { id } = data;
     const triggerElement = `.project-animation-${id}`;
-    const selector = `${triggerElement} .map-marker`;
-    const markers = document.querySelectorAll(selector);
+    const selector = `${triggerElement} svg .o-line`;
+    const itemList = document.querySelectorAll(selector);
     const timeline = new TimelineLite();
-    [].map.call(markers, (marker) => {
-      timeline.fromTo(marker, .25, { scale: 0 }, { scale: 1 });
+    [].map.call(itemList, (item) => {
+      timeline.to(item, .25, { 'stroke-dashoffset' : 0 });
     });
     return timeline;
   }
@@ -50,10 +50,14 @@ class BrtPointsApp extends Component {
     const controller = getScrollMagicController();
     const timelines = {
       elements: new TimelineLite()
-      .add('markerAnimations'),
+        .fromTo(`${triggerElement} .progress-chart`, .2, { visibility: 'hidden', opacity: 0 }, { visibility: 'visible', opacity: 1 })
+        .to(`${triggerElement} .progress-chart .o-line--mobility`, .4, { 'stroke-dashoffset': 0 }, .25)
+        .to(`${triggerElement} .progress-chart .o-line--activity`, .4, { 'stroke-dashoffset': 0 }, .26)
+        .to(`${triggerElement} .progress-chart .o-line--appetite`, .4, { 'stroke-dashoffset': 0 }, .27)
+        .to(`${triggerElement} .progress-chart .o-line--pain`, .4, { 'stroke-dashoffset': 0 }, .28)
+        .to(`${triggerElement} .progress-chart .o-line--stress`, .4, { 'stroke-dashoffset': 0 }, .29)
     };
     const { elements } = timelines;
-    elements.add(this.addTweens(), 'markerAnimations+=1', 'sequence', -0.5);
 
     new ScrollMagic.Scene({
       triggerElement,
@@ -81,11 +85,6 @@ class BrtPointsApp extends Component {
       .addTo(controller);
   }
 
-  isMapAdded() {
-    const mapElement = document.querySelector('.map-wrapper .gm-style');
-    return mapElement !== null;
-  }
-
   render() {
     const { data } = this.props;
     const {
@@ -97,19 +96,19 @@ class BrtPointsApp extends Component {
       projectTitlePart2,
       solution,
     } = data;
-    // Need to wait until map is loaded as well
-    if (!this.initAnimate && this.ScrollMagic !== null && this.isMapAdded()) {
+    if (!this.initAnimate && this.ScrollMagic !== null) {
       this.initAnimate = true;
       this.animate();
     }
     return (
       <>
         <section className={`project-animation project-animation-${id}`} ref={this.animationRef}>
-          <GoogleMap />
           <div className="fixed-bg" />
           <div className="section-top-indicator" />
           <div className="section-content">
-            <div className="content-wrapper" />
+            <div className="content-wrapper">
+              <Chart />
+            </div>
           </div>
         </section>
         <ProjectDetails
@@ -126,7 +125,7 @@ class BrtPointsApp extends Component {
   }
 }
 
-BrtPointsApp.propTypes = {
+PetHealthTracker.propTypes = {
   data: PropTypes.shape({
     id: PropTypes.string.isRequired,
     invertText: PropTypes.bool.isRequired,
@@ -138,4 +137,4 @@ BrtPointsApp.propTypes = {
   }),
 };
 
-export default BrtPointsApp;
+export default PetHealthTracker;
