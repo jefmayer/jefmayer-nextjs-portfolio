@@ -18,7 +18,7 @@ function Footer({ currentYear }) {
               <br />
               .NET Dev, Platform-Based Solutions
               <br />
-              PHP, Wordpress Development
+              PHP, WordPress Development
               <br />
               GenAI-Assisted Coding
               <br />
