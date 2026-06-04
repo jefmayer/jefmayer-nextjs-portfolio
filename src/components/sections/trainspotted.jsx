@@ -147,7 +147,7 @@ class Trainspotted extends Component {
                 <div className="data-table resightings-values-table">
                   <div className="table-title">
                     <span className="title-spacing title-left-spacing" />
-                    <h3>277 repeated sightings of 209 engines since 3/20/2019</h3>
+                    <h3>277 repeated sightings of 209 engines</h3>
                     <span className="title-spacing title-right-spacing" />
                   </div>
                   <div className="y-axis">
@@ -452,24 +452,7 @@ class Trainspotted extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="x-axis">
-                    <div className="data-set">
-                      <ul className="data-set-values">
-                        <li>3/19</li>
-                        <li>5/19</li>
-                        <li>7/19</li>
-                        <li>9/19</li>
-                        <li>11/19</li>
-                        <li>1/20</li>
-                        <li>3/20</li>
-                        <li>5/20</li>
-                        <li>7/20</li>
-                        <li>9/20</li>
-                        <li>11/20</li>
-                        <li>1/21</li>
-                      </ul>
-                    </div>
-                  </div>
+                  <div className="x-axis" />
                 </div>
               </div>
               <div className="visualization-overlay">

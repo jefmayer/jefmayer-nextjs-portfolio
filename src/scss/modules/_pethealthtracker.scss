@@ -9,14 +9,14 @@ $plum: rgb(179,38,229);
 $violet: rgb(126,90,251);
 
 .project-animation-pethealthtracker {
-  height: 50rem;
+  height: 37.5rem;
 
   @include bp.breakpoint(sm) {
-    height: 78rem;
+    height: 58.5rem;
   }
 
   @include bp.breakpoint(md) {
-    height: 80rem;
+    height: 60rem;
   }
 
   .fixed-bg {

@@ -52,7 +52,6 @@ const Chart = () => {
 
   // Helper to generate dates at intervals
   const getDatesAtInterval = useCallback((start, end, maxDates = 20) => {
-    console.log(`${start}, ${end}, ${maxDates}`);
     const dates = [];
     const startTime = new Date(start).getTime();
     const endTime = new Date(end).getTime();
@@ -100,7 +99,8 @@ const Chart = () => {
       .tickSizeInner(-height - margin.top)
       .tickSizeOuter(0)
       .tickPadding(10)
-      .tickFormat(d3.timeFormat('%b %d'));
+      .tickFormat(() => '');
+      //.tickFormat(d3.timeFormat('%b %d'));
       
     const yAxis = d3.axisLeft(yScale);
 
